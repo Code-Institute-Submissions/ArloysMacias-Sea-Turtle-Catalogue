@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+
+{% block individual_head %}
+<!--Boostrap-->
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='boostrap/css/bootstrap.min.css')}}">
+
+{% endblock%}
+
+
+{% block content %}
+
+<section class="section-features js--section-features" id="features">
+    <div class="row">
+        <h2>Be like the sea turtle: At ease in your own shell.</h2>
+        <div class="long-copy">
+            <p>
+                Bill Copeland
+            </p>
+        </div>
+
+    </div>
+
+    <div class="row js--wp-1 animated fadeIn">
+
+        <div class="col-4 span-1-of-4 box">
+            <i class="fa fa-leaf" aria-hidden="true"></i>
+            <h3>Easy</h3>
+            <p>
+                A simple way to acilitates conservation efforts on the galapagos.
+            </p>
+        </div>
+        <div class="col-4 span-1-of-4 box">
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+            <h3>Monitor</h3>
+            <p>
+                Monitor the sea turtle population in galapagos.
+            </p>
+
+        </div>
+        <div class="col-4 span-1-of-4 box">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <h3>Search</h3>
+            <p>
+                Search the catalogue and filter based on severeals parameters.
+            </p>
+        </div>
+
+        <div class="col-4 span-1-of-4 box">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            <h3>Manage</h3>
+            <p>
+                Manage new and existing individuals insividuals
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-turtles">
+    <ul class="turtles-showcase clearfix">
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/mexico-2086549_1920.jpg" alt="black bmw">
+            </figure>
+        </li>
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/turtle-863336_1280.jpg" alt="red audi">
+            </figure>
+        </li>
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg" alt="blue amg">
+            </figure>
+        </li>
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/wallpapertip_sea-turtle-wallpaper_953711.jpg" alt="golf">
+            </figure>
+        </li>
+    </ul>
+    <ul class="turtles-showcase clearfix">
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/water-1446738_1920.jpg" alt="black bmw">
+            </figure>
+        </li>
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/wallpapertip_sea-turtle-wallpaper_111957.jpg" alt="red audi">
+            </figure>
+        </li>
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/turtle-2250720_1920.jpg" alt="blue amg">
+            </figure>
+        </li>
+        <li>
+            <figure class="turtle-photo">
+                <img src="static/images/turtles-cards/wallpapertip_hd-fish-wallpaper-for_374090.jpg" alt="golf">
+            </figure>
+        </li>
+    </ul>
+</section>
+
+
+<!--Jquery-->
+<script src="static/js/jquery.js"></script>
+
+<!--Waypoints-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
+<!--Boostrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="static/js/script.js"></script>
+{% endblock %}

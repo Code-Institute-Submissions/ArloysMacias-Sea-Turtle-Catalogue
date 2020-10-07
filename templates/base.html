@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!--FavIcon-->
+    <link rel="shorcut icon" type="image/x-ico" href="{{url_for('static' , filename= 'images/favicon.ico')}}">
+
+
+    {% block individual_head %}
+
+    {% endblock %}
+
+    <!--My Css-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/queries.css')}}">
+
+    <title>Galapagos Turtles</title>
+
+</head>
+
+<body>
+
+<!-- Page Header -->
+<header>
+    <nav>
+        <div class="row">
+            <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle Logo logo" class="logo">
+            <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle Logo logo" class="logo2">
+            <ul class="main-nav js--main-nav">
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="#turtles_managment">TURTLES MANAGMENT</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contac_us">CNTACT US</a></li>
+            </ul>
+            <a class="mobile-nav-icon js--nav-icon"><i class="fa fa-bars"></i></a>
+        </div>
+    </nav>
+
+
+    <div class="hero-text-box">
+        <h1>Galápagos turtles</h1>
+        <a class="btn btn-full js--scroll-to-kontakt" href="#contac_us">CNTACT US</a>
+        <a class="btn btn-ghost" href="{{url_for('get_turtles')}}">TURTLES</a>
+    </div>
+
+</header>
+
+
+<!-- Main Content -->
+{% block content%}
+{% endblock%}
+
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Turtles Managment</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <div class="row">
+                <!--Links-->
+                <div class="col-md-12 pb-5">
+                    <div class="footer-links flex-center">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=100007278138587" target="blank" class="fb-ic"><i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                        <!-- GitHub-->
+                        <a href="https://github.com/ArloysMacias" target="blank" class="gplus-ic"><i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                        <!--Linkedin -->
+                        <a href="https://www.linkedin.com/in/arloys-macias-rojas-ba6307128/?locale=en_US" target="blank" class="li-ic"><i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                        <!--ResearchGate -->
+                        <a href="https://www.researchgate.net/profile/Arloys_Rojas" target="blank" class="li-ic"><i class="fab fa-researchgate fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <p>
+            Copyright © 2020 by Arloys Macias Rojas. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+</body>
+
+
+</html>
