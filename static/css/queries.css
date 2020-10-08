@@ -46,10 +46,13 @@
     .mobile-nav-icon {display: inline-block; }
 
     .main-nav {
-        display: block;
         float: left;
         margin-top: 35px;
         margin-left: 0px;
+    }
+
+    .logo {
+        height: 63px;
     }
 
     .main-nav li {
@@ -89,7 +92,7 @@
     .icon-small2 { margin-left: auto; }
     .verkstad-features2 { margin-left: auto; }
     .features-long-copy { margin-left: auto; }
-    .main-nav { font-size: 85%; }
+    .main-nav { font-size: 80%; }
     .carwash-priser { width: 110%; }
 }
 
