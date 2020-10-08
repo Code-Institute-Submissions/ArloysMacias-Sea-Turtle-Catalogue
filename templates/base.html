@@ -13,6 +13,11 @@
     <!--FavIcon-->
     <link rel="shorcut icon" type="image/x-ico" href="{{url_for('static' , filename= 'images/favicon.ico')}}">
 
+    <!--Boostrap y Data table-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
 
     {% block individual_head %}
 
@@ -32,22 +37,22 @@
 <header>
     <nav>
         <div class="row">
-            <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle Logo logo" class="logo">
-            <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle Logo logo" class="logo2">
+            <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle logo" class="logo">
+            <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle logo" class="logo2">
             <ul class="main-nav js--main-nav">
                 <li><a href="{{url_for('index')}}">Home</a></li>
                 <li><a href="#turtles_managment">TURTLES MANAGMENT</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#contac_us">CNTACT US</a></li>
             </ul>
-            <a class="mobile-nav-icon js--nav-icon"><i class="fa fa-bars"></i></a>
+            <a class="mobile-nav-icon js--nav-icon"><i class="fa fa-times"></i></a>
         </div>
     </nav>
 
 
     <div class="hero-text-box">
         <h1>Galápagos turtles</h1>
-        <a class="btn btn-full js--scroll-to-kontakt" href="#contac_us">CNTACT US</a>
+        <a class="btn btn-full js--scroll-to-kontakt" href="#contac_us">CONTACT US</a>
         <a class="btn btn-ghost" href="{{url_for('get_turtles')}}">TURTLES</a>
     </div>
 
@@ -56,8 +61,8 @@
 
 <!-- Main Content -->
 {% block content%}
-{% endblock%}
 
+{% endblock%}
 
 <footer>
     <div class="row">
@@ -94,7 +99,39 @@
     </div>
 </footer>
 
-</body>
 
+<!--Scripts-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'/>
+
+<!--My Script-->
+<script type="text/javascript" src="static/js/script.js"></script>
+
+<!--Boostrap and Data Table-->
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#tablax').DataTable({
+            scrollY: 400,
+            lengthMenu: [ [10, 25,50, -1], [10, 25,50, "All"] ],
+        });
+    });
+
+</script>
+<!--End of Boostrap and Data Table-->
+
+<!--My Script
+Data table overwrites some variables so I repeat the script one more time after using datatables scripts
+-->
+<script type="text/javascript" src="static/js/script.js"></script>
+
+<!--End-Scripts-->
+
+</body>
 
 </html>

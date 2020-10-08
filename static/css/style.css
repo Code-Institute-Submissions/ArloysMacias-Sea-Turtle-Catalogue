@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive|Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
-
-th,td {
-    padding: 0.4rem !important;
-}
-body>div {
-    box-shadow: 10px 10px 8px #888888;
-    border: 2px solid black;
-    border-radius: 10px;
-}
 
 /* ------------------------------------------------*/
 /* BASIC SETUP */
@@ -57,6 +45,7 @@ section {
 
 .box {
     padding: 1%;
+    text-align: center;
 }
 
 /* -------- HEADINGS -------- */
@@ -104,14 +93,14 @@ h2:after {
 .long-copy {
     line-height: 145%;
     text-align: center;
-    font-size: 150%;
+    font-size: 140%;
 
 }
 
 .box p {
     font-size: 90%;
     line-height: 145%;
-
+    text-align: center;
 }
 
 .turtle-text {
@@ -293,14 +282,14 @@ header {
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
     width: auto;
     float: left;
     margin-top: 20px;
 }
 
 .logo2 {
-    height: 50px;
+    height: 40px;
     width: auto;
     float: left;
     margin: 5px 0;
@@ -376,6 +365,7 @@ header {
 }
 
 .sticky .logo {display: none; }
+
 .sticky .logo2 { display: block; }
 
 

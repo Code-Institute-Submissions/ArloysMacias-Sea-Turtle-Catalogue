@@ -59,19 +59,21 @@ $(document).ready(function() {
 
 
     /* Mobile nav */
-    $('.js--nav-icon').click(function() {
-        var nav = $('.main-nav');
-        var icon = $('.js--nav-icon i');
+    $(".js--nav-icon").click(function() {
+        var nav = $(".main-nav");
+        var icons = $(".js--nav-icon i");
 
         nav.slideToggle(200);
-        if (icon.hasClass('fa fa-bars')) {
-            icon.addClass('fa fa-times');
-            icon.removeClass('fa fa-bars');
+        if (icons.hasClass("fa-bars")) {
+            icons.addClass("fa-times");
+            icons.removeClass("fa-bars");
         } else {
-            icon.addClass('fa fa-bars');
-            icon.removeClass('fa fa-times');
+            icons.addClass("fa-bars");
+            icons.removeClass("fa-times");
         }
 
     });
+
+
 
 });
