@@ -17,8 +17,6 @@ $(document).ready(function() {
 
     });
 
-
-
     /* Navigation scroll */
 
     $(function() {
@@ -73,7 +71,6 @@ $(document).ready(function() {
         }
 
     });
-
 
 
 });

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!--FavIcon-->
+  <link rel="shorcut icon" type="image/x-ico" href="{{url_for('static' , filename= 'images/favicon.ico')}}">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="{{url_for('static' , filename= 'mdbcss/mdb.min.css')}}">
+
+  <!-- MDBootstrap Datatables  -->
+  <link href="../static/mdbcss/addons/datatables2.min.css" rel="stylesheet">
+
+  <!--My Css-->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/queries.css')}}">
+
+</head>
+<body>
+
+<!-- Page Header -->
+<header>
+  <nav>
+    <div class="row">
+      <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle logo" class="logo">
+      <img src="static/images/logo/wave-306989_1280.png" style="background-color: inherit" alt="Galapago Turtle logo" class="logo2">
+      <ul class="main-nav js--main-nav">
+        <li><a href="{{url_for('index')}}">HOME</a></li>
+        <li><a href="#turtles_managment">TURTLE MANAGMENT</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contac_us">CONTACT US</a></li>
+      </ul>
+      <a class="mobile-nav-icon js--nav-icon"><i class="fa fa-bars"></i></a>
+    </div>
+  </nav>
+
+
+  <div class="hero-text-box">
+    <h1>Galápagos turtles</h1>
+    <a class="btn btn-full js--scroll-to-kontakt" href="#contac_us">CONTACT US</a>
+    <a class="btn btn-ghost" href="{{url_for('get_turtles')}}">TURTLES</a>
+  </div>
+
+</header>
+
+
+{% block content %}
+
+
+{% endblock %}
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="static/mdbjs/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'/>
+
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="static/mdbjs/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="static/mdbjs/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="static/mdbjs/mdb.min.js"></script>
+  <!-- MDBootstrap Datatables  -->
+  <script type="text/javascript" src="../static/mdbjs/addons/datatables2.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+  });
+</script>
+
+  <!-- My custom scripts (optional) -->
+  <script type="text/javascript" src="static/js/script.js"></script>
+
+
+
+</body>
+</html>

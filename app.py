@@ -38,8 +38,9 @@ def contact():
     return render_template("contact.html", page_title="Contact")
 
 @app.route('/turtles')
+@app.route('/get_turtles')
 def get_turtles():
-    return render_template("turtles.html", turtles=mongo.db.turtle.find())
+    return render_template("turtlesEditable.html", turtles=mongo.db.turtle.find())
 
 if __name__== "__main__":
     app.run(host=os.environ.get("IP"), port= int(os.environ.get("PORT", 5000)),debug=True)
