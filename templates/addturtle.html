@@ -1,0 +1,113 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Add Turtle</h3>
+<div class="row">
+
+
+
+    <form action="{{url_for('insert_turtle')}}" method="POST" enctype="multipart/form-data" class="col s12">
+
+
+        <div class="picture-container">
+            <div class="picture">
+                <img src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no" class="picture-src" id="wizardPicturePreview" title="">
+                <input type="file" id="wizard-picture" name="picture" class="">
+            </div>
+            <small id="label_upload_1">Choose Picture</small>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">poll</i>
+                <select id="category" name="capture_location">
+
+                    <option value="" disabled selected>
+                        Chose Capture
+                    </option>
+
+                    {% for cap in captures %}
+                    <option value="{{cap.capture_location}}">
+                        {{cap.capture_location}}
+                    </option>
+                    {% endfor %}
+
+                </select>
+                <label>Turtle Capture</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="turtle_name" name="turtle_name" type="text">
+                <label for="icon_prefix">Turtle Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="right_flipper_tag" name="right_flipper_tag" type="text">
+                <label for="icon_prefix">Right Flipper Tag</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">poll</i>
+                <select id="morphotype" name="morphotype">
+
+                    <option value="" disabled selected>
+                        Chose a Morphotype
+                    </option>
+
+                    {% for mor in morphotype %}
+                    <option value="{{mor.morphotype_skin}}">
+                        {{mor.morphotype_skin}}
+                    </option>
+                    {% endfor %}
+
+                </select>
+                <label>Morphotype</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">poll</i>
+                <select id="gender" name="gender">
+
+                    <option value="" disabled selected>
+                        Chose a Gender
+                    </option>
+
+                    {% for gen in gender %}
+                    <option value="{{gen.gender_name}}">
+                        {{gen.gender_name}}
+                    </option>
+                    {% endfor %}
+
+                </select>
+                <label>Gender</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="switch">
+                <label>
+                    <input id="recaptured" name="recaptured" type="checkbox">
+                    <span class="lever"></span>
+                    Recaptured
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add Turtle
+                <i class="material-icons right">playlist_add</i>
+            </button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

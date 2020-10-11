@@ -1,0 +1,26 @@
+{% extends 'base.html'%} {% block content %}
+<div class="row">
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for turtle in turtles %}
+
+        <li>
+            <div class="collapsible-header">
+                <div class="col s3">
+                    <i class="material-icons">expand_more</i>
+                    <a href="{{url_for('delete_turtle', turtle_id = turtle._id )}}" class="waves-effect waves-light btn btn_small">Delete</a>
+                    <a href="{{url_for('edit_turtle', turtle_id = turtle._id )}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+
+                </div>
+                <div class="turtle_header col s9">
+                    <strong>{{turtle.turtle_name}}</strong> -
+                    <div class="litle_picture">{{turtle.picture}}</div>
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <img src="{{url_for('file' , filename = turtle['picture'])}}" alt="">
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
