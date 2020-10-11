@@ -2,6 +2,10 @@
 <html>
 
 <head>
+
+    <!--FavIcon-->
+    <link rel="shorcut icon" type="image/x-ico" href="{{url_for('static' , filename= 'images/favicon.ico')}}">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!--link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" /-->
@@ -37,9 +41,15 @@
 <script type="text/javascript" src="{{url_for('static', filename= 'js/myscript.js')}}"></script>
 
 <script type="text/javascript">
+
     $(document).ready(function() {
         $('.collapsible').collapsible();
+
         $('select').material_select();
+
+        document.querySelectorAll('.select-wrapper').forEach(t => t.addEventListener('click', e=>e.stopPropagation())) // fixes first click
+
+
         $(".button-collapse").sideNav();
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
@@ -48,9 +58,12 @@
             clear: 'Clear',
             close: 'Ok',
             closeOnSelect: false, // Close upon selecting a date,
+            defaultTime: 'now'
+
         });
         $('.datepicker').on('mousedown',function(event){ event.preventDefault(); })
     });
+
 
 </script>
 

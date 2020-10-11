@@ -13,18 +13,12 @@ mongo = PyMongo(app)
 
 #  pymongo.MongoClient(os.getenv("MONGO_URI"))["turtleDB"]["turtle"].find() =  mongo.db.turtle.find()    another way
 
-
+##### TURTLES #######
 @app.route('/')
 @app.route('/get_turtles')
 def get_turtles():
     return render_template("turtles.html",
                            turtles=mongo.db.turtles.find())
-
-
-@app.route('/get_captures')
-def get_captures():
-    return render_template("capture.html",
-                           captures=mongo.db.capture_data.find())
 
 
 @app.route('/add_turtle')
@@ -41,21 +35,57 @@ def insert_turtle():
         picture = request.files['picture']
         mongo.save_file(picture.filename, picture)
         mongo.db.turtles.insert(
-                           {
-                               'turtle_name': request.form.get('turtle_name'),
-                               'right_flipper_tag': request.form.get('right_flipper_tag'),
-                               'morphotype': request.form.get('morphotype'),
-                               'gender': request.form.get('gender'),
-                               'picture': picture.filename
-                           }
+            {
+                'turtle_name': request.form.get('turtle_name'),
+                'right_flipper_tag': request.form.get('right_flipper_tag'),
+                'morphotype': request.form.get('morphotype'),
+                'gender': request.form.get('gender'),
+                'picture': picture.filename,
+                'capture_location':request.form.get('capture_location')
+            }
         )
     # turtles.insert_one(request.form.to_dict()) //Doesnt work with this way
     return redirect(url_for('get_turtles'))
 
 
-@app.route('/file/<filename>')
-def file(filename):
-    return mongo.send_file(filename)
+@app.route('/edit_turtle/<turtle_id>')
+def edit_turtle(turtle_id):
+    the_turtle = mongo.db.turtles.find_one({"_id": ObjectId(turtle_id)})
+    all_captures = mongo.db.capture_data.find()
+    return render_template('editturtles.html', turtle=the_turtle, captures=all_captures, gender=mongo.db.gender.find(),
+                           morphotype=mongo.db.morphotype.find())
+
+
+@app.route('/update_turtle/<turtle_id>', methods=["POST"])
+def update_turtle(turtle_id):
+    turtles = mongo.db.turtles
+    if 'picture' in request.files:
+        picture = request.files['picture']
+        mongo.save_file(picture.filename, picture)
+        turtles.update({'_id': ObjectId(turtle_id)},
+                       {
+                           'turtle_name': request.form.get('turtle_name'),
+                           'right_flipper_tag': request.form.get('right_flipper_tag'),
+                           'morphotype': request.form.get('morphotype'),
+                           'gender': request.form.get('gender'),
+                           'picture': picture.filename,
+                           'capture_location':request.form.get('capture_location')
+                       })
+    return redirect(url_for('get_turtles'))
+
+
+@app.route('/delete_turtle/<turtle_id>')
+def delete_turtle(turtle_id):
+    mongo.db.turtles.remove({'_id': ObjectId(turtle_id)})
+    return redirect(url_for('get_turtles'))
+
+    ##### CAPTURE ########
+
+
+@app.route('/get_captures')
+def get_captures():
+    return render_template("capture.html",
+                           captures=mongo.db.capture_data.find())
 
 
 @app.route('/add_capture')
@@ -66,14 +96,16 @@ def new_capture():
 @app.route('/insert_capture', methods=['POST'])
 def insert_capture():
     mongo.db.capture_data.insert_one(request.form.to_dict())
+    # mongo.db.capture_data.insert(
+    #     {
+    #         'capture_location': request.form.get('capture_location'),
+    #         'weather': request.form.get('weather'),
+    #         'ocean_temperature': request.form.get('ocean_temperature'),
+    #         'date': request.form.get('date')
+    #         # 'monitoring_total_time': request.form.get('monitoring_total_time')
+    #     }
+    # )
     return redirect(url_for('get_captures'))
-
-
-@app.route('/edit_turtle/<turtle_id>')
-def edit_turtle(turtle_id):
-    the_turtle = mongo.db.turtles.find_one({"_id": ObjectId(turtle_id)})
-    all_captures = mongo.db.capture_data.find()
-    return render_template('editturtles.html', turtle=the_turtle, captures=all_captures)
 
 
 @app.route('/edit_capture/<capture_id>')
@@ -83,39 +115,29 @@ def edit_capture(capture_id):
     return render_template('editcapture.html', captureToedit=the_capture, captures=all_captures)
 
 
-@app.route('/update_turtle/<turtle_id>', methods=["POST"])
-def update_turtle(turtle_id):
-    turtles = mongo.db.turtles
-    turtles.update({'_id': ObjectId(turtle_id)},
-                   {
-                       'turtle_name': request.form.get['turtle_name'],
-                       'right_flipper_tag': request.form.get['right_flipper_tag'],
-                       'morphotype': request.form.get['morphotype'],
-                       'gender': request.form.get['gender'],
-                       'picture': request.form.get['picture']
-                   })
-    return redirect(url_for('get_turtles'))
-
-
 @app.route('/update_capture/<capture_id>', methods=["POST"])
 def update_capture(capture_id):  # need to be equal to {url_for('update_capture'
-    mongo.db.capture_data.update(
-        {'_id': ObjectId(capture_id)},
-        {'right_flipper_tag': request.form.get('right_flipper_tag')}  # request.form.get['capture_name'] is bad
-    )
+    mongo.db.capture_data.update({'_id': ObjectId(capture_id)},
+                                 {
+                                     'capture_location': request.form.get('capture_location'),
+                                     'weather': request.form.get('weather'),
+                                     'ocean_temperature': request.form.get('ocean_temperature'),
+                                     'date': request.form.get('date')
+                                 })
     return redirect(url_for('get_captures'))
-
-
-@app.route('/delete_turtle/<turtle_id>')
-def delete_turtle(turtle_id):
-    mongo.db.turtles.remove({'_id': ObjectId(turtle_id)})
-    return redirect(url_for('get_turtles'))
 
 
 @app.route('/delete_capture/<capture_id>')
 def delete_capture(capture_id):
     mongo.db.capture_data.remove({'_id': ObjectId(capture_id)})
     return redirect(url_for('get_captures'))
+
+    ###### PICTURE ########
+
+
+@app.route('/file/<file_name>')
+def load_image(file_name):
+    return mongo.send_file(file_name)
 
 
 if __name__ == "__main__":
