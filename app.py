@@ -16,15 +16,14 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html', turtles=mongo.db.turtle.find())
+    return render_template('index.html', turtles=mongo.db.turtles.find(), captures=mongo.db.capture_data.find())
 
 
                                         ##### TURTLES #######
 
 @app.route('/get_turtles')
 def get_turtles():
-    return render_template("turtles.html",
-                           turtles=mongo.db.turtles.find())
+    return render_template('turtles.html', turtles=mongo.db.turtles.find())
 
 
 @app.route('/add_turtle')

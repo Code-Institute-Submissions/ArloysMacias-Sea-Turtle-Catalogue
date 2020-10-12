@@ -9,14 +9,12 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: Chilanka;
-    font-size: x-large;
+    font-family: "Roboto";
+    /*font-size: x-large;*/
 
 }
 
-
-
-/*Profile Pic Start*/
+/* -------- PROFILE PIC -------- */
 .picture-container{
     position: relative;
     cursor: pointer;
@@ -76,12 +74,12 @@
     height: 123px;
 
 }
-/*Profile Pic End*/
+/* -------- END PROFILE PIC -------- */
 
 
+
+/* -------- TEMPERATURE PICKER  -------- */
 /**** https://codepen.io/GeorgePark/pen/oVgGyM ***/
-
-
 .thermometer {
     flex-direction: column;
     justify-content: center;
@@ -148,6 +146,8 @@
     text-shadow: 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.1);
 }
 /**** https://codepen.io/GeorgePark/pen/oVgGyM ***/
+/* --------END TEMPERATURE PICKER  -------- */
+
 
 /**** Modifying materialized  ******/
 .parallax-background {
@@ -201,6 +201,20 @@ ul:not(.browser-default) {
     margin-right: 40px;
 }
 
+.carousel {
+    height: 447px;
+}
+
+.carousel .carousel-item {
+    width: 251px;
+}
+
+.collapsible-body img{
+    width: 101px;
+    height: 67px;
+}
+
+/* -------- QUERY  -------- */
 /*** Mobile
 ***/@media only screen and (min-width: 601px){
     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
