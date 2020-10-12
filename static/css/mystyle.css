@@ -1,3 +1,21 @@
+/* ------------------------------------------------*/
+/* BASIC SETUP */
+/* ------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;1,100;1,200&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Chilanka;
+    font-size: x-large;
+
+}
+
+
+
 /*Profile Pic Start*/
 .picture-container{
     position: relative;
@@ -154,4 +172,47 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+.material-icons {
+    font-size: 60px;
+}
+
+.features {
+    text-align: center;
+    color: #5a9db4;
+    margin-top: 60px;
+}
+
+.features p{
+    font-size: 20px;
+}
+
+nav .brand-logo {
+    margin-left: 54px;
+}
+
+
+nav ul a {
+    font-size: 20px;
+}
+
+ul:not(.browser-default) {
+    margin-right: 40px;
+}
+
+/*** Mobile
+***/@media only screen and (min-width: 601px){
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .side-nav li>a {
+        font-size: 28px;
+    }
+
+    a.button-collapse i {
+        font-size: 46px;
+    }
 }
