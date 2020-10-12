@@ -1,50 +1,57 @@
-{% extends 'base.html'%} {% block content %}
-<div class="row">
-    <ul class="collapsible" data-collapsible="accordion">
-        {% for turtle in turtles %}
+{% extends 'baseindex.html'%} {% block content %}
 
-        <li>
-            <div class="collapsible-header">
-                <div class="col s3">
-                    <i class="material-icons">expand_more</i>
-                    <a href="{{url_for('delete_turtle', turtle_id = turtle._id )}}"
-                       class="waves-effect waves-light btn btn_small">Delete</a>
-                    <a href="{{url_for('edit_turtle', turtle_id = turtle._id )}}"
-                       class="waves-effect waves-light btn btn_small blue">Edit</a>
-                </div>
-                <div class="turtle_header col s9">
-                    <strong>{{turtle.turtle_name}}</strong>--{{turtle.capture_location}}
-                </div>
-            </div>
+<div class="container">
+    <section>
+        <div class="row">
+            <ul class="collapsible" data-collapsible="accordion">
+                {% for turtle in turtles %}
 
-            <div class="collapsible-body">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Turtle Name</th>
-                        <th>Right Flipper Tag</th>
-                        <th>Morphotype</th>
-                        <th>Gender</th>
-                        <th class="picture_intable">Picture</th>
-                        <th>Capture Location</th>
-                    </tr>
-                    </thead>
+                <li>
+                    <div class="collapsible-header">
+                        <div class="col s3">
+                            <i class="material-icons">expand_more</i>
+                            <a href="{{url_for('delete_turtle', turtle_id = turtle._id )}}"
+                               class="waves-effect waves-light btn btn_small">Delete</a>
+                            <a href="{{url_for('edit_turtle', turtle_id = turtle._id )}}"
+                               class="waves-effect waves-light btn btn_small blue">Edit</a>
+                        </div>
+                        <div class="turtle_header col s9">
+                            <strong>{{turtle.turtle_name}}</strong>--{{turtle.capture_location}}
+                        </div>
+                    </div>
 
-                    <tbody>
-                    <tr>
-                        <td>{{turtle.turtle_name}}</td>
-                        <td>{{turtle.right_flipper_tag}}</td>
-                        <td>{{turtle.morphotype}}</td>
-                        <td>{{turtle.gender}}</td>
-                        <td><img src="{{url_for('load_image', file_name=turtle.picture)}}" alt=""></td>
-                        <td>{{turtle.capture_location}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <div class="collapsible-body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Turtle Name</th>
+                                <th>Right Flipper Tag</th>
+                                <th>Morphotype</th>
+                                <th>Gender</th>
+                                <th class="picture_intable">Picture</th>
+                                <th>Capture Location</th>
+                            </tr>
+                            </thead>
 
-        </li>
-        {% endfor %}
-    </ul>
+                            <tbody>
+                            <tr>
+                                <td>{{turtle.turtle_name}}</td>
+                                <td>{{turtle.right_flipper_tag}}</td>
+                                <td>{{turtle.morphotype}}</td>
+                                <td>{{turtle.gender}}</td>
+                                <td><img src="{{url_for('load_image', file_name=turtle.picture)}}" alt=""></td>
+                                <td>{{turtle.capture_location}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
 </div>
+
+
 {% endblock %}

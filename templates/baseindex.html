@@ -6,6 +6,9 @@
     <!--FavIcon-->
     <link rel="shorcut icon" type="image/x-ico" href="{{url_for('static' , filename= 'images/favicon.ico')}}">
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 
     <!--Hove animation-->
     <link href="{{url_for('static' , filename= 'hover-mater/css/hover-min.css')}}" rel="stylesheet">
@@ -22,7 +25,7 @@
 <header>
     <nav class="transnav">
         <div class="nav-wrapper">
-            <a href="{{url_for('get_turtles')}}" class="brand-logo">Turtle Manager</a>
+            <a href="{{url_for('get_turtles')}}" class="brand-logo"><img src="{{url_for('static', filename='images/logo/wave-306989_1280.png')}}" class="logo"></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="{{url_for('index')}}">Home</a></li>
@@ -43,33 +46,33 @@
 
 </header>
 
-
-    {% block content %} {% endblock %}
-
+{% block content %} {% endblock %}
 
 <footer class="page-footer">
-    <div class="container">
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem">
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <div class="footer-nav col s12 m6 l6">
+                <a class="animate__animated -back-pulse" href="{{url_for('index')}}">Home</a>
+                <a class="animate__animated -back-pulse" href="{{url_for('get_turtles')}}">Turtles</a>
+                <a class="animate__animated -back-pulse" href="{{url_for('add_turtle')}}">New Turtle</a>
+                <a class="animate__animated -back-pulse" href="{{url_for('get_captures')}}">Manage Captures</a>
             </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
+            <div class="col s12 m6 l6 footer-links">
+                <div class="flex-center">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/profile.php?id=100007278138587" target="blank" class="fb-ic"><i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                    <!-- GitHub-->
+                    <a href="https://github.com/ArloysMacias" target="blank" class="gplus-ic"><i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                    <!--Linkedin -->
+                    <a href="https://www.linkedin.com/in/arloys-macias-rojas-ba6307128/?locale=en_US" target="blank" class="li-ic"><i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                    <!--ResearchGate -->
+                    <a href="https://www.researchgate.net/profile/Arloys_Rojas" target="blank" class="li-ic"><i class="fab fa-researchgate fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
+    <div class="footer-copyright" style="text-align: center">
+        <div class="container">© 2020 Copyright Arloys Macias Rojas</div>
     </div>
 </footer>
 
