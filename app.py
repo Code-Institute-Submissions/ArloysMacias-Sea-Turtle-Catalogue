@@ -13,8 +13,14 @@ mongo = PyMongo(app)
 
 #  pymongo.MongoClient(os.getenv("MONGO_URI"))["turtleDB"]["turtle"].find() =  mongo.db.turtle.find()    another way
 
-##### TURTLES #######
+
 @app.route('/')
+def index():
+    return render_template('index.html', turtles=mongo.db.turtle.find())
+
+
+                                        ##### TURTLES #######
+
 @app.route('/get_turtles')
 def get_turtles():
     return render_template("turtles.html",
@@ -79,22 +85,22 @@ def delete_turtle(turtle_id):
     mongo.db.turtles.remove({'_id': ObjectId(turtle_id)})
     return redirect(url_for('get_turtles'))
 
-    ##### CAPTURE ########
 
+                                    ##### CAPTURE ########
 
 @app.route('/get_captures')
 def get_captures():
-    return render_template("capture.html",
+    return render_template("captures.html",
                            captures=mongo.db.capture_data.find())
 
 
-@app.route('/add_capture')
-def new_capture():
-    return render_template('add_capture.html')
+@app.route('/add_capture/<route>')
+def new_capture(route):
+    return render_template('add_capture.html', source= route)
 
 
-@app.route('/insert_capture', methods=['POST'])
-def insert_capture():
+@app.route('/insert_capture/<source>', methods=['POST'])
+def insert_capture(source):
     mongo.db.capture_data.insert_one(request.form.to_dict())
     # mongo.db.capture_data.insert(
     #     {
@@ -105,7 +111,11 @@ def insert_capture():
     #         # 'monitoring_total_time': request.form.get('monitoring_total_time')
     #     }
     # )
+    if source =='from_addTurtle':
+        return redirect(url_for('add_turtle'))
+
     return redirect(url_for('get_captures'))
+
 
 
 @app.route('/edit_capture/<capture_id>')
@@ -132,8 +142,8 @@ def delete_capture(capture_id):
     mongo.db.capture_data.remove({'_id': ObjectId(capture_id)})
     return redirect(url_for('get_captures'))
 
-    ###### PICTURE ########
 
+                                        ###### PICTURE ########
 
 @app.route('/file/<file_name>')
 def load_image(file_name):

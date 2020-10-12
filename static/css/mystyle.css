@@ -131,3 +131,27 @@
 }
 /**** https://codepen.io/GeorgePark/pen/oVgGyM ***/
 
+/**** Modifying materialized  ******/
+.parallax-background {
+    background-color: #03b1fb3b;
+}
+.transnav {
+    background-color: #5A9DB4;
+}
+
+.page-footer{
+    background-color: #5A9DB4;
+}
+.section-carousel{
+    padding-bottom: 95px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

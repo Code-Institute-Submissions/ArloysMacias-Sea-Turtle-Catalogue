@@ -1,0 +1,108 @@
+{% extends 'baseindex.html'%} {% block content %}
+
+<!--Parallax-->
+<section>
+    <div class="parallax-container parallax-background">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
+    </div>
+    <div class="section white">
+        <div class="parallax-container parallax-fade">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col s12 mb5" style="text-align: center">
+                        <h2 class="header">
+                            Be like the sea turtle
+                        </h2>
+                        <h5>
+                            At ease in your own shell
+                        </h5>
+                        <p>
+                            [Bill Copeland]
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center; color: #5a9db4">
+                    <div class="col m3 s12">
+                        <i class="material-icons prefix">done</i>
+                        <h3>
+                            Easy
+                        </h3>
+                        <p>
+                            A simple way to acilitates conservation efforts on the galapagos.
+                        </p>
+                    </div>
+                    <div class="col m3 s12">
+                        <i class="material-icons prefix">dvr</i>
+                        <h3>
+                            Monitor
+                        </h3>
+                        <p >
+                            Monitor the sea turtle population in galapagos.
+                        </p>
+                    </div>
+                    <div class="col m3 s12">
+                        <i class="material-icons prefix">search</i>
+                        <h3>
+                            Search
+                        </h3>
+                        <p>
+                            Search the catalogue and filter based on severeals parameters.
+                        </p>
+                    </div>
+
+                    <div class="col m3 s12">
+                        <i class="material-icons prefix">create</i>
+                        <h3>
+                            Manage
+                        </h3>
+                        <p>
+                            Manage new and existing individuals insividuals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container parallax-background parallax-fade">
+        <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
+    </div>
+</section>
+
+<!--Carousel-->
+<section class="section-carousel">
+    <div class="carousel">
+        {% for turtle in turtles %}
+        <a class="carousel-item" href="#one!">
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        {% if not turtle.picture or  turtle.picture==null  %}
+                            <img src="{{url_for('static' , filename = 'images/video-not-working.png')}}" alt="">
+                            {% else %}
+                            <img src="{{url_for('load_image' , file_name = turtle.picture)}}" alt="">
+                        {% endif %}
+                        <span class="card-title">{{turtle.turtle_name}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Location:  {{turtle.capture_location}}</p>
+                        <p>Weather:  {{turtle.weather}}</p>
+                        <p>Date:  {{turtle.date}}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+
+    </div>
+</section>
+
+
+
+
+{% endblock %}
