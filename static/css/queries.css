@@ -4,7 +4,6 @@
 
 }
 
-
 /** Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .no-pad-bot h5{
@@ -35,7 +34,18 @@
         flex: 1 0 auto;
     }
 
+    .carousel{
+        display: block;
+    }
+
+    .carousel-item.active .row .card{
+        -webkit-box-shadow: 0px 116px 182px -100px rgba(0,0,0,0.64);
+        -moz-box-shadow: 0px 116px 182px -100px rgba(0,0,0,0.64);
+        box-shadow: 0px 116px 182px -100px rgba(0,0,0,0.64);
+    }
+
 }
+
 
 /** Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -54,6 +64,15 @@
     main {
         flex: 1 0 auto;
     }
+    .carousel{
+        display: block;
+    }
+
+    .carousel-item.active .row .card{
+        -webkit-box-shadow: 0px 116px 182px -100px rgba(0,0,0,0.64);
+        -moz-box-shadow: 0px 116px 182px -100px rgba(0,0,0,0.64);
+        box-shadow: 0px 116px 182px -100px rgba(0,0,0,0.64);
+    }
 
 }
 
@@ -71,6 +90,10 @@
     }
     main {
         flex: 1 0 auto;
+    }
+
+    .carousel{
+        display: block;
     }
 
 }
