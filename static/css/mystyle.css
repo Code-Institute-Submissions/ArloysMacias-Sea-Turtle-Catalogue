@@ -273,9 +273,8 @@ ul:not(.browser-default) {
         font-size: 19px;
     }
 
-
     nav .brand-logo{
-        left: 81%;
+        left: 86%;
     }
     .parallax-container {
         height: 700px;
@@ -317,6 +316,11 @@ ul:not(.browser-default) {
         display: none;
     }
 
+    nav .brand-logo {
+        left: 82%;
+    }
+
+
 }
 
 /** Materialize query Desktop Devices */
@@ -324,6 +328,10 @@ ul:not(.browser-default) {
 
     .hidded-parallax{
         display: block;
+    }
+
+    nav .brand-logo {
+        left: 0%;
     }
 }
 
