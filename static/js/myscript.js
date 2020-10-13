@@ -39,6 +39,9 @@ $(document).ready(function(){
     $('.modal').modal();
     $('.parallax').parallax();
 
+
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
 });
 
 
