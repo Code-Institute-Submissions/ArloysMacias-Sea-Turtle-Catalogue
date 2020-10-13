@@ -1,105 +1,97 @@
 {% extends 'baseindex.html'%} {% block content %}
 
 <!--Parallax-->
-<section>
-    <div class="parallax-container parallax-background">
-        <div class="jumbotron jumbotron-fluid" style="padding-top: 80px">
-            <div class="container">
-                <h1 class="display-4 custom-title">Galapagos Turtles</h1>
-                <h4 class="lead" style="color: white">This is a turtle manager based on the Galapagos database.</h4>
-            </div>
-        </div>
-        <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
-    </div>
-    <div class="section white">
-        <div class="parallax-container parallax-fade">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12" style="text-align: center; margin-top: 9px">
-                        <h3 class="header2">
-                            Be like the sea turtle: at ease in your own shell
-                        </h3>
-                        <h5>
-                            [Bill Copeland]
-                        </h5>
-                    </div>
-                </div>
-                <div class="row features">
-                    <div class="animate__animated animate__bounce col m3 s12">
-                        <i class="material-icons prefix">done</i>
-                        <h5>
-                            Easy
-                        </h5>
-                        <p>
-                            An easy way to streamline conservation efforts in the Galapagos.
-                        </p>
-                    </div>
-                    <div class="animate__animated animate__bounce col m3 s12">
-                        <i class="material-icons prefix">dvr</i>
-                        <h5>
-                            Monitor
-                        </h5>
-                        <p >
-                            Monitor the population of sea turtles in Galapagos.
-                        </p>
-                    </div>
-                    <div class="animate__animated animate__bounce col m3 s12">
-                        <i class="material-icons prefix">search</i>
-                        <h5>
-                            Search
-                        </h5>
-                        <p>
-                            Search the catalog and filter based on various parameters.
-                        </p>
-                    </div>
-
-                    <div class="animate__animated animate__bounce col m3 s12">
-                        <i class="material-icons prefix">create</i>
-                        <h5>
-                            Manage
-                        </h5>
-                        <p>
-                            Manage new and existing individuals.
-                        </p>
-                    </div>
-                </div>
-            </div>
+<div class="parallax-container parallax-background">
+    <div class="jumbotron jumbotron-fluid" style="padding-top: 80px">
+        <div class="container">
+            <h1 class="display-4 custom-title">Galapagos Turtles</h1>
+            <p class="lead description">This is a turtle manager based on the Galapagos database.</p>
         </div>
     </div>
-    <div class="parallax-container parallax-background parallax-fade">
-        <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
-    </div>
-</section>
-
-<!--Carousel-->
-<section class="section-carousel">
-    <div class="carousel">
-        {% for turtle in turtles %}
-        <a class="carousel-item" href="{{url_for('edit_turtle', turtle_id = turtle._id )}}">
+    <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
+</div>
+<!--Features-->
+<div class="section white">
+    <div class="parallax-container parallax-fade">
+        <div class="container">
             <div class="row">
-                <div class="card">
-                    <div class="card-image">
-                        {% if not turtle.picture or  turtle.picture==null  %}
-                        <img src="{{url_for('static' , filename = 'images/video-not-working.png')}}" alt="">
-                        {% else %}
-                        <img src="{{url_for('load_image' , file_name = turtle.picture)}}" alt="">
-                        {% endif %}
-                        <span class="card-title">{{turtle.turtle_name}}</span>
-                    </div>
-                    <div class="card-content">
-                        <p>RFT:  {{turtle.right_flipper_tag}}</p>
-                        <p>Morphotype:  {{turtle.morphotype}}</p>
-                        <p>Gender:  {{turtle.gender}}</p>
-                        <p>Location:  {{turtle.capture_location}}</p>
-                    </div>
+                <div class="col s12" style="text-align: center; margin-top: 9px">
+                    <h3 class="header2">
+                        Be like the sea turtle: at ease in your own shell
+                    </h3>
+                    <p style="margin-top: -22px">
+                        [Bill Copeland]
+                    </p>
                 </div>
             </div>
-        </a>
-        {% endfor %}
-
+            <div class="row features">
+                <div class="animate__animated animate__bounce col  s12 m6 l6">
+                    <i class="material-icons prefix">done</i>
+                    <h5>
+                        Easy
+                    </h5>
+                    <p>
+                        An easy way to streamline conservation efforts in the Galapagos.
+                    </p>
+                </div>
+                <div class="animate__animated animate__bounce col  s12 m6 l6">
+                    <i class="material-icons prefix">dvr</i>
+                    <h5>
+                        Monitor
+                    </h5>
+                    <p >
+                        Monitor the population of sea turtles in Galapagos.
+                    </p>
+                </div>
+                <div class="animate__animated animate__bounce col  s12 m6 l6">
+                    <i class="material-icons prefix">create</i>
+                    <h5>
+                        Manage
+                    </h5>
+                    <p>
+                        Manage new and existing individuals.
+                    </p>
+                </div>
+                <div class="animate__animated animate__bounce col  s12 m6 l6">
+                    <i class="material-icons prefix">search</i>
+                    <h5>
+                        Search
+                    </h5>
+                    <p>
+                        Search the catalog and filter based on various parameters.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
-
-
+</div>
+<div class="parallax-container hidded-parallax parallax-background parallax-fade">
+    <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
+</div>
+<!--Carousel-->
+<div class="carousel">
+    {% for turtle in turtles %}
+    <a class="carousel-item" href="{{url_for('edit_turtle', turtle_id = turtle._id )}}">
+        <div class="row">
+            <div class="card">
+                <div class="card-image">
+                    {% if not turtle.picture or  turtle.picture==null  %}
+                    <img src="{{url_for('static' , filename = 'images/video-not-working.png')}}" alt="">
+                    {% else %}
+                    <img src="{{url_for('load_image' , file_name = turtle.picture)}}" alt="">
+                    {% endif %}
+                    <span class="card-title">{{turtle.turtle_name}}</span>
+                </div>
+                <div class="card-content">
+                    <p>RFT:  {{turtle.right_flipper_tag}}</p>
+                    <p>Morphotype:  {{turtle.morphotype}}</p>
+                    <p>Gender:  {{turtle.gender}}</p>
+                    <p>Location:  {{turtle.capture_location}}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
 
 {% endblock %}

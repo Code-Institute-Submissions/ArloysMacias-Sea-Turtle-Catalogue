@@ -32,7 +32,9 @@ $(document).ready(function(){
     });
     $('.datepicker').on('mousedown',function(event){ event.preventDefault(); })
     $('.carousel').carousel({
-
+        duration:120,
+        dist:-150,
+        numVisible:6
     });
     $('.modal').modal();
     $('.parallax').parallax();
