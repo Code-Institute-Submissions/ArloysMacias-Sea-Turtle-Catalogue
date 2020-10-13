@@ -2,13 +2,28 @@
 /** Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
-
-
 }
 
 
 /** Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .no-pad-bot h5{
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px;
+    }
+
+    #index-banner h5{
+        font-size: 25px;
+    }
+
+    .hidded-column{
+        display: table;
+    }
+    .table-picture{
+        height: 114px;
+    }
 
 }
 

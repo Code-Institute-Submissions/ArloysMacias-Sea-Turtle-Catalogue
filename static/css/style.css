@@ -243,12 +243,11 @@ nav .brand-logo {
 }
 
 /* ------------------------------------------------*/
-/* TURTLES */
+/* TURTLES collapsible */
 /* ------------------------------------------------*/
 
-.collapsible-body img{
-    width: 101px;
-    height: 67px;
+.hidded-column{
+    display: none;
 }
 
 /* ------------------------------------------------*/
