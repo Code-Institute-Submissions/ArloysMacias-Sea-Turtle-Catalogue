@@ -303,7 +303,7 @@ ul:not(.browser-default) {
     }
 
     html {
-        font-size: 2rem;
+        font-size: 30px;
     }
 
     .hidded-parallax{
