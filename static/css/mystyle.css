@@ -4,21 +4,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;1,100;1,200&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap');
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Roboto";
-    font-size: 36px;
     flex: 1 0 auto;
 
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 /* -------- PROFILE PIC -------- */
@@ -171,12 +170,6 @@ body {
     padding-bottom: 95px;
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
 main {
     flex: 1 0 auto;
 }
@@ -269,6 +262,10 @@ ul:not(.browser-default) {
 
 /** Materialize query Mobile Devices */
 @media (max-width: 600px) {
+    body{
+        font-size: xx-large;
+    }
+
     .features p{
         font-size: 19px;
     }
