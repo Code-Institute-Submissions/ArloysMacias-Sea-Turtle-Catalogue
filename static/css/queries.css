@@ -6,6 +6,10 @@
 
 /** Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    nav .brand-logo {
+        left: 85%;
+    }
+
     .no-pad-bot h5{
         font-size: 40px;
     }
