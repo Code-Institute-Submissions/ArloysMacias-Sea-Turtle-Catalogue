@@ -29,15 +29,6 @@
         height: 114px;
     }
 
-    body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
-    main {
-        flex: 1 0 auto;
-    }
-
     .carousel{
         display: block;
     }
@@ -57,17 +48,14 @@
         left: 0%;
     }
 
-    .fake-content{
-        height: 56vw;
+    nav ul a {
+        font-size: 19px;
     }
-    body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
-    main {
-        flex: 1 0 auto;
-    }
+
+    /*.fake-content{*/
+    /*    height: 56vw;*/
+    /*}*/
+
     .carousel{
         display: block;
     }
@@ -83,9 +71,9 @@
 /** Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-    .fake-content{
-        height: 44vw;
-    }
+    /*.fake-content{*/
+    /*    height: 44vw;*/
+    /*}*/
 
     body {
         display: flex;
