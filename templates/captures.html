@@ -1,43 +1,41 @@
 {% extends 'base.html'%} {% block content %}
-<section>
-    <div class="container">
-        <div class="row">
-            <h3>Captures</h3>
-            <ul class="collapsible" data-collapsible="accordion">
-                {% for capture in captures %}
-                <li>
-                    <div class="collapsible-header">
-                        <a href="{{url_for('delete_capture' , capture_id = capture._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
-                        <a href="{{url_for('edit_capture' , capture_id = capture._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                        <div class="task_header col s9">
-                            <strong>{{capture.capture_location}}</strong>
-                        </div>
+<div class="container">
+    <h3>Captures</h3>
+    <div class="row">
+        <ul class="collapsible" data-collapsible="accordion">
+            {% for capture in captures %}
+            <li>
+                <div class="collapsible-header">
+                    <a href="{{url_for('delete_capture' , capture_id = capture._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
+                    <a href="{{url_for('edit_capture' , capture_id = capture._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    <div class="task_header col s9">
+                        <strong>{{capture.capture_location}}</strong>
                     </div>
+                </div>
 
-                    <div class="collapsible-body">
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Weather</th>
-                                <th>Temperature</th>
-                                <th>Date</th>
-                            </tr>
-                            </thead>
+                <div class="collapsible-body">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Weather</th>
+                            <th>Temperature</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
 
-                            <tbody>
-                            <tr>
-                                <td>{{capture.weather}}</td>
-                                <td>{{capture.ocean_temperature}}&#176;</td>
-                                <td>{{capture.date}}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-            <a href="{{url_for('new_capture' , route='fromAddCapture')}}" class="waves-effect waves-light btn">New</a>
-        </div>
+                        <tbody>
+                        <tr>
+                            <td>{{capture.weather}}</td>
+                            <td>{{capture.ocean_temperature}}&#176;</td>
+                            <td>{{capture.date}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{url_for('new_capture' , route='fromAddCapture')}}" class="waves-effect waves-light btn">New</a>
     </div>
-</section>
+</div>
 {% endblock %}

@@ -28,7 +28,6 @@ $(document).ready(function(){
         close: 'Ok',
         closeOnSelect: false, // Close upon selecting a date,
         defaultTime: 'now'
-
     });
     $('.datepicker').on('mousedown',function(event){ event.preventDefault(); })
     $('.carousel').carousel({
@@ -39,9 +38,6 @@ $(document).ready(function(){
     $('.modal').modal();
     $('.parallax').parallax();
 
-
-    $('#dtBasicExample').DataTable();
-    $('.dataTables_length').addClass('bs-select');
 });
 
 
@@ -65,8 +61,6 @@ function openModal() {
 
     showPleaseWait();
 };
-
-
 
 
 // Thermometer  https://codepen.io/GeorgePark/pen/oVgGyM

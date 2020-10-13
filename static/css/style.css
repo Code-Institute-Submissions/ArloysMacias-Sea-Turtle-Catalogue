@@ -2,13 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;1,100;1,200&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     font-family: "Roboto";
-    flex: 1 0 auto;
-
+    font-size: 103%;
 }
 
 body {
@@ -16,10 +11,10 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
-
 main {
     flex: 1 0 auto;
 }
+
 /* -------- BASIC SETUP -------- */
 
 
@@ -156,32 +151,19 @@ main {
 
 
 
-/* -------- FONTS -------- */
-
-.custom-title{
-    font-size: 60px;
-}
-
-h2{
-    font-size: 40px;
-    text-align: center;
-}
+/*!* -------- FONTS -------- *!*/
 .material-icons {
-    font-size: 45px;
+    font-size: 44px;
+    color: #2bbbad;
 }
 
-.lead{
-    font-size: 22px;
-    text-align: center;
-}
-
-.footer-nav a{
-    font-size: 29px;
-    margin-right: 8px;
-}
 
 /* -------- COLORS -------- */
-h2{
+.custom-navbar{
+    background-color: #36a69a;
+}
+
+h5{
     color: white;
 }
 .parallax-background {
@@ -189,6 +171,10 @@ h2{
 }
 .transnav {
     background-color: #5A9DB4;
+}
+
+.icon-block h5{
+    color: black;
 }
 
 .page-footer{
@@ -199,10 +185,6 @@ h2{
     color: #5a9db4;
 }
 
-ul:not(.browser-default) {
-    margin-right: 40px;
-    background-color: #5a9db4;
-}
 
 .custom-title{
     color: #ffffff;
@@ -233,21 +215,11 @@ p{
 /* ------------------------------------------------*/
 nav .brand-logo {
     margin-left: 54px;
+    left: 75%;
 }
 
 .logo{
-    width: 55px; margin-top: 9px;
-}
-
-/* ----Mobile Nav-----*/
-nav .button-collapse i {
-    font-size: 44px;
-}
-.side-nav li>a {
-    font-size: 20px;
-}
-nav .brand-logo{
-    left: 86%;
+    width: 55px; margin-top: 2px;
 }
 
 
@@ -256,7 +228,15 @@ nav .brand-logo{
 /* ------------------------------------------------*/
 
 .parallax-container {
-    height: 500px;
+    height: 520px;
+}
+
+/* ------------------------------------------------*/
+/* FEATURES */
+/* ------------------------------------------------*/
+
+.icon-block p{
+    text-align: center;
 }
 
 /* ------------------------------------------------*/
@@ -268,6 +248,16 @@ nav .brand-logo{
     height: 67px;
 }
 
+/* ------------------------------------------------*/
+/* CONTACT */
+/* ------------------------------------------------*/
+.map{
+    text-align: center;
+}
+.map-size{
+    width: 100%;
+    height: 464px;
+}
 /* ------------------------------------------------*/
 /* CAROUSEL */
 /* ------------------------------------------------*/
@@ -282,20 +272,11 @@ nav .brand-logo{
     width: 345px;
 }
 
+.carousel {
+    display: none;
+}
+
 /* ------------------------------------------------*/
 /* FOOTER */
 /* ------------------------------------------------*/
-
-.footer-links{
-    text-align: right;
-}
-
-.footer-links a{
-    margin: 0 0 20px 20px;
-}
-
-/*.hidded-parallax{*/
-/*    display: none;*/
-/*}*/
-
 

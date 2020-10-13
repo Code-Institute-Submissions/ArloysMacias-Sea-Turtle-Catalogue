@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Parallax Template - Materialize</title>
 
     <!--FavIcon-->
     <link rel="shorcut icon" type="image/x-ico" href="{{url_for('static' , filename= 'images/favicon.ico')}}">
@@ -25,59 +27,78 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/queries.css')}}" type="text/css" />
 
 </head>
-
 <body>
-<header>
-    <nav class="transnav">
-        <div class="nav-wrapper">
-            <a href="{{url_for('index')}}" class="brand-logo"><img src="{{url_for('static', filename='images/logo/wave-306989_1280.png')}}" class="logo"></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="{{url_for('index')}}">Home</a></li>
-                <li><a href="{{url_for('get_turtles')}}">Turtles</a></li>
-                <li><a href="{{url_for('add_turtle')}}">New Turtle</a></li>
-                <li><a href="{{url_for('get_captures')}}">Manage Captures</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="{{url_for('index')}}">Home</a></li>
-                <li><a href="{{url_for('get_turtles')}}">Turtles</a></li>
-                <li><a href="{{url_for('add_turtle')}}">New Turtle</a></li>
-                <li><a href="{{url_for('get_captures')}}">Manage Captures</a></li>
-            </ul>
-        </div>
-    </nav>
+<!--NavBar-->
+<nav class="custom-navbar" role="navigation">
+    <div class="nav-wrapper">
+        <a href="{{url_for('index')}}" class="brand-logo"><img src="{{url_for('static', filename='images/logo/wave-306989_1280.png')}}" class="logo"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('get_turtles')}}">Turtles</a></li>
+            <li><a href="{{url_for('add_turtle')}}">New Turtle</a></li>
+            <li><a href="{{url_for('get_captures')}}">Manage Captures</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('get_turtles')}}">Turtles</a></li>
+            <li><a href="{{url_for('add_turtle')}}">New Turtle</a></li>
+            <li><a href="{{url_for('get_captures')}}">Manage Captures</a></li>
+        </ul>
+    </div>
+</nav>
 
-</header>
+{% block content %}
 
-{% block content %} {% endblock %}
+{% endblock %}
 
-<footer class="page-footer">
-    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem">
+<!--Footer-->
+<footer class="page-footer teal">
+    <div class="container">
         <div class="row">
-            <div class="footer-nav col s12 m6 l6">
-                <a class="animate__animated -back-pulse" href="{{url_for('index')}}">Home</a>
-                <a class="animate__animated -back-pulse" href="{{url_for('get_turtles')}}">Turtles</a>
-                <a class="animate__animated -back-pulse" href="{{url_for('add_turtle')}}">New Turtle</a>
-                <a class="animate__animated -back-pulse" href="{{url_for('get_captures')}}">Manage Captures</a>
+            <div class="col l6 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+                    our full time job. Any amount would help support and continue development on this project and is
+                    greatly appreciated.</p>
+
+
             </div>
-            <div class="col s12 m6 l6 footer-links">
-                <div class="flex-center">
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/profile.php?id=100007278138587" target="blank" class="fb-ic"><i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
-                    <!-- GitHub-->
-                    <a href="https://github.com/ArloysMacias" target="blank" class="gplus-ic"><i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
-                    <!--Linkedin -->
-                    <a href="https://www.linkedin.com/in/arloys-macias-rojas-ba6307128/?locale=en_US" target="blank" class="li-ic"><i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
-                    <!--ResearchGate -->
-                    <a href="https://www.researchgate.net/profile/Arloys_Rojas" target="blank" class="li-ic"><i class="fab fa-researchgate fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a>
-                </div>
+            <div class="col l3 s12">
+                <!--                <h5 class="white-text">Settings</h5>-->
+                <!--                <ul>-->
+                <!--                    <li><a class="white-text" href="#!">Link 1</a></li>-->
+                <!--                    <li><a class="white-text" href="#!">Link 2</a></li>-->
+                <!--                    <li><a class="white-text" href="#!">Link 3</a></li>-->
+                <!--                    <li><a class="white-text" href="#!">Link 4</a></li>-->
+                <!--                </ul>-->
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="white-text" href="https://www.facebook.com/profile.php?id=100007278138587"
+                           target="blank"><i
+                            class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a></li>
+                    <li><a class="white-text" href="https://github.com/ArloysMacias" target="blank"><i
+                            class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a></li>
+                    <li><a class="white-text"
+                           href="https://www.linkedin.com/in/arloys-macias-rojas-ba6307128/?locale=en_US"><i
+                            class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a></li>
+                    <li><a class="white-text" href="https://www.researchgate.net/profile/Arloys_Rojas"><i
+                            class="fab fa-researchgate fa-lg white-text mr-md-5 mr-3 fa-2x"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="footer-copyright" style="text-align: center">
-        <div class="container">© 2020 Copyright Arloys Macias Rojas</div>
+    <!--Copyright -->
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 Copyright <a class="brown-text text-lighten-3" href="http://materializecss.com">Arloys Macias
+            Rojas</a>
+        </div>
     </div>
 </footer>
+
 
 <!-- Jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -89,4 +110,6 @@
 <script type="text/javascript" src="{{url_for('static', filename= 'js/myscript.js')}}"></script>
 </body>
 
+
+</body>
 </html>
