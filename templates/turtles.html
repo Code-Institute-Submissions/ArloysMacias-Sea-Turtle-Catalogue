@@ -1,5 +1,5 @@
 {% extends 'base.html'%} {% block content %}
-<div class="container">
+<div class="container fake-content">
     <h3>Turtles</h3>
     <div class="row">
         <ul class="collapsible" data-collapsible="accordion">
@@ -45,6 +45,7 @@
             </li>
             {% endfor %}
         </ul>
+        <a href="{{url_for('add_turtle')}}" class="waves-effect waves-light btn">New</a>
     </div>
 </div>
 {% endblock %}

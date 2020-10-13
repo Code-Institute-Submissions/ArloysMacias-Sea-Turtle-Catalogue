@@ -20,9 +20,19 @@
 
     .hidded-column{
         display: table;
+        width: 100%;
     }
     .table-picture{
         height: 114px;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
     }
 
 }
@@ -32,54 +42,37 @@
     nav .brand-logo{
         left: 0%;
     }
-    /*.custom-title{*/
-    /*    font-size: 70px;*/
-    /*}*/
 
-    /*h2{*/
-    /*    font-size: 50px;*/
-    /*}*/
-    /*.material-icons {*/
-    /*    font-size: 55px;*/
-    /*}*/
-
-    /*.lead{*/
-    /*    font-size: 32px;*/
-    /*}*/
+    .fake-content{
+        height: 56vw;
+    }
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
 
 }
 
 /** Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    /*nav .brand-logo{*/
-    /*    left: 0%;*/
-    /*}*/
-    /*.custom-title{*/
-    /*    font-size: 80px;*/
-    /*}*/
 
-    /*h2{*/
-    /*    font-size: 60px;*/
-    /*}*/
-    /*.material-icons {*/
-    /*    font-size: 65px;*/
-    /*}*/
+    .fake-content{
+        height: 44vw;
+    }
 
-    /*.lead{*/
-    /*    font-size: 42px;*/
-    /*}*/
-
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
 
 }
 
-/*!*** Materializecss queries ***!*/
-
-/*@media only screen and (max-width: 992px){*/
-/*    nav .brand-logo {*/
-/*        left: 2%;*/
-/*        right: 0;*/
-/*        -webkit-transform: translateX(-50%);*/
-/*        transform: translateX(-50%);*/
-/*    }*/
-/*}*/
 
