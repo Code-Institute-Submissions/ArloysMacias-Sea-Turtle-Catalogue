@@ -162,6 +162,9 @@ main {
 .custom-navbar{
     background-color: #36a69a;
 }
+.button-collapse i{
+    color: white;
+}
 
 h5{
     color: white;
@@ -279,4 +282,13 @@ nav .brand-logo {
 /* ------------------------------------------------*/
 /* FOOTER */
 /* ------------------------------------------------*/
-
+.footer-links{
+    text-align: center;
+    margin-top: 30px
+}
+.footer-links a i{
+    margin: 5px 5px;
+}
+.footer-copyright{
+    text-align: center;
+}
