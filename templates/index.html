@@ -1,71 +1,67 @@
-{% extends 'baseindex.html'%} {% block content %}
+{% extends 'base.html'%} {% block content %}
 
 <!--Parallax-->
 <div class="parallax-container parallax-background">
     <div class="jumbotron jumbotron-fluid" style="padding-top: 80px">
         <div class="container">
-            <h1 class="display-4 custom-title">Galapagos Turtles</h1>
-            <p class="lead description">This is a turtle manager based on the Galapagos database.</p>
+            <h1 class="display-4 custom-title">GaRMDS</h1>
+            <p class="lead">(Galapagos Research and Monitoring Database System)</p>
         </div>
     </div>
-    <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
-</div>
-<!--Features-->
-<div class="section white">
-    <div class="parallax-container parallax-fade">
-            <div class="row">
-                <div class="col s12" style="text-align: center; margin-top: 9px">
-                    <h3 class="header2">
-                        Be like the sea turtle: at ease in your own shell
-                    </h3>
-                    <p style="margin-top: -22px">
-                        [Bill Copeland]
-                    </p>
-                </div>
-            </div>
-            <div class="row features">
-                <div class="animate__animated animate__bounce col  s12 m6 l6">
-                    <i class="material-icons prefix">done</i>
-                    <h5>
-                        Easy
-                    </h5>
-                    <p>
-                        An easy way to streamline conservation efforts.
-                    </p>
-                </div>
-                <div class="animate__animated animate__bounce col  s12 m6 l6">
-                    <i class="material-icons prefix">dvr</i>
-                    <h5>
-                        Monitor
-                    </h5>
-                    <p >
-                        Monitor the population of sea turtles in Galapagos.
-                    </p>
-                </div>
-                <div class="animate__animated animate__bounce col  s12 m6 l6">
-                    <i class="material-icons prefix">create</i>
-                    <h5>
-                        Manage
-                    </h5>
-                    <p>
-                        Manage new and existing individuals.
-                    </p>
-                </div>
-                <div class="animate__animated animate__bounce col  s12 m6 l6">
-                    <i class="material-icons prefix">search</i>
-                    <h5>
-                        Search
-                    </h5>
-                    <p>
-                        Search the catalog and filter based on various parameters.
-                    </p>
-                </div>
-            </div>
+    <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg">
     </div>
 </div>
-<div class="parallax-container hidded-parallax parallax-background parallax-fade">
-    <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg"></div>
 
+<!--Features-->
+<div class="container">
+    <div class="section">
+        <!--   Icon Section   -->
+        <div class="row animate__animated animate__bounce">
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center feature-text"><i class="material-icons">dvr</i></h2>
+                    <h5 class="center">Monitor</h5>
+
+                    <p class="light">GaRMDS can be used to monitor and sustainably manage marine turtle populations as
+                        well as their nesting and foraging.
+                        sites.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center feature-text"><i class="material-icons">create</i></h2>
+                    <h5 class="center">Manage</h5>
+
+                    <p class="light">GaRMDS provides invaluable information for Pacific island countries and territories
+                        to manage their turtle resources. </p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center feature-text"><i class="material-icons">search</i></h2>
+                    <h5 class="center">Search</h5>
+
+                    <p class="light">This website we give you the possibility to search the catalog and filter based on
+                        various parameters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="parallax-container hidded-parallax parallax-background parallax-fade">
+    <div class="jumbotron jumbotron-fluid" style="padding-top: 80px">
+        <div class="container">
+            <h2 class="display-4">Be like the sea turtle: at ease in your own shell</h2>
+            <p class="lead">[Bill Copeland]</p>
+        </div>
+    </div>
+    <div class="parallax"><img src="static/images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg">
+    </div>
 </div>
 <!--Carousel-->
 <div class="carousel">
@@ -74,7 +70,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-image">
-                    {% if not turtle.picture or  turtle.picture==null  %}
+                    {% if not turtle.picture or turtle.picture==null %}
                     <img src="{{url_for('static' , filename = 'images/video-not-working.png')}}" alt="">
                     {% else %}
                     <img src="{{url_for('load_image' , file_name = turtle.picture)}}" alt="">
@@ -82,10 +78,10 @@
                     <span class="card-title">{{turtle.turtle_name}}</span>
                 </div>
                 <div class="card-content">
-                    <p>RFT:  {{turtle.right_flipper_tag}}</p>
-                    <p>Morphotype:  {{turtle.morphotype}}</p>
-                    <p>Gender:  {{turtle.gender}}</p>
-                    <p>Location:  {{turtle.capture_location}}</p>
+                    <p>RFT: {{turtle.right_flipper_tag}}</p>
+                    <p>Morphotype: {{turtle.morphotype}}</p>
+                    <p>Gender: {{turtle.gender}}</p>
+                    <p>Location: {{turtle.capture_location}}</p>
                 </div>
             </div>
         </div>

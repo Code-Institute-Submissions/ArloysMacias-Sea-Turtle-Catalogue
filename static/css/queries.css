@@ -1,0 +1,56 @@
+
+/** Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+
+/** Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/** Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    nav .brand-logo{
+        left: 0%;
+    }
+    .custom-title{
+        font-size: 70px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+    .material-icons {
+        font-size: 55px;
+    }
+
+    .lead{
+        font-size: 32px;
+    }
+
+}
+
+/** Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    nav .brand-logo{
+        left: 0%;
+    }
+    .custom-title{
+        font-size: 80px;
+    }
+
+    h2{
+        font-size: 60px;
+    }
+    .material-icons {
+        font-size: 65px;
+    }
+
+    .lead{
+        font-size: 42px;
+    }
+
+
+}

@@ -1,7 +1,4 @@
-/* ------------------------------------------------*/
-/* BASIC SETUP */
-/* ------------------------------------------------*/
-
+/* -------- BASIC SETUP -------- */
 @import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;1,100;1,200&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap');
 
 * {
@@ -19,6 +16,12 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+}
+/* -------- BASIC SETUP -------- */
+
 
 /* -------- PROFILE PIC -------- */
 .picture-container{
@@ -48,7 +51,6 @@ body {
     height: 133px;
     margin-left: -46px;
 }
-
 .picture:hover{
     border-color: #2ca8ff;
 }
@@ -74,14 +76,12 @@ body {
     top: 0;
     width: 100%;
 }
-
 .picture-src{
     width: 100%;
     height: 123px;
 
 }
 /* -------- END PROFILE PIC -------- */
-
 
 
 /* -------- TEMPERATURE PICKER  -------- */
@@ -155,7 +155,35 @@ body {
 /* --------END TEMPERATURE PICKER  -------- */
 
 
-/**** Modifying materialized  ******/
+
+/* -------- FONTS -------- */
+
+.custom-title{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+.material-icons {
+    font-size: 45px;
+}
+
+.lead{
+    font-size: 22px;
+    text-align: center;
+}
+
+.footer-nav a{
+    font-size: 29px;
+    margin-right: 8px;
+}
+
+/* -------- COLORS -------- */
+h2{
+    color: white;
+}
 .parallax-background {
     background-color: #273135ad;
 }
@@ -166,31 +194,9 @@ body {
 .page-footer{
     background-color: #5A9DB4;
 }
-.section-carousel{
-    padding-bottom: 95px;
-}
 
-main {
-    flex: 1 0 auto;
-}
-
-.material-icons {
-    font-size: 45px;
-}
-
-.features {
-    text-align: center;
+.feature-text {
     color: #5a9db4;
-    margin-top: 60px;
-}
-
-nav .brand-logo {
-    margin-left: 54px;
-}
-
-
-nav ul a {
-    font-size: 20px;
 }
 
 ul:not(.browser-default) {
@@ -198,52 +204,73 @@ ul:not(.browser-default) {
     background-color: #5a9db4;
 }
 
-.carousel .carousel-item {
-    width: 251px;
-}
-
-.collapsible-body img{
-    width: 101px;
-    height: 67px;
-}
-
-.header2{
-    color: rgb(76 133 152);
-    /*font-size: 35px;*/
-}
-
-
 .custom-title{
     color: #ffffff;
-    /*font-size: 72px;*/
 }
 
-.description{
+.lead {
     color: #5a9db4;
-    /*font-size: 23px;*/
+}
+
+p{
+    color: black;
 }
 
 .footer-nav a{
     color: white;
-    font-size: 29px;
-    margin-right: 8px;
 }
 
 .-back-pulse{
     color: #2ca8ff;
 }
 
-.footer-links{
-    text-align: right;
+.header2{
+    color: rgb(76 133 152);
 }
 
-.footer-links a{
-    margin: 0 0 20px 20px;
+/* ------------------------------------------------*/
+/* HEADER */
+/* ------------------------------------------------*/
+nav .brand-logo {
+    margin-left: 54px;
 }
 
 .logo{
     width: 55px; margin-top: 9px;
 }
+
+/* ----Mobile Nav-----*/
+nav .button-collapse i {
+    font-size: 44px;
+}
+.side-nav li>a {
+    font-size: 20px;
+}
+nav .brand-logo{
+    left: 86%;
+}
+
+
+/* ------------------------------------------------*/
+/* PARALLAX */
+/* ------------------------------------------------*/
+
+.parallax-container {
+    height: 500px;
+}
+
+/* ------------------------------------------------*/
+/* TURTLES */
+/* ------------------------------------------------*/
+
+.collapsible-body img{
+    width: 101px;
+    height: 67px;
+}
+
+/* ------------------------------------------------*/
+/* CAROUSEL */
+/* ------------------------------------------------*/
 
 .carousel{
     margin-top: -211px;
@@ -255,85 +282,20 @@ ul:not(.browser-default) {
     width: 345px;
 }
 
-.parallax-container {
-    height: 900px;
+/* ------------------------------------------------*/
+/* FOOTER */
+/* ------------------------------------------------*/
+
+.footer-links{
+    text-align: right;
 }
 
-
-/** Materialize query Mobile Devices */
-@media (max-width: 600px) {
-    body{
-        font-size: xx-large;
-    }
-
-    .features p{
-        font-size: 19px;
-    }
-
-    nav .brand-logo{
-        left: 86%;
-    }
-    .parallax-container {
-        height: 700px;
-    }
-
-    .hidded-parallax{
-        display: none;
-    }
+.footer-links a{
+    margin: 0 0 20px 20px;
 }
 
-
-/** Materialize query Tablet Devices */
-@media (min-width: 600px) {
-
-    /*nav .brand-logo{*/
-    /*    left: 81%;*/
-    /*}*/
-    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        height: 64px;
-        line-height: 64px;
-    }
-
-    .side-nav li>a {
-        font-size: 25px;
-    }
-
-    a.button-collapse i {
-        font-size: 46px;
-    }
-
-    html {
-        font-size: 30px;
-    }
-
-    .hidded-parallax{
-        display: none;
-    }
-
-    nav .brand-logo {
-        left: 82%;
-    }
-
-
-}
-
-/** Materialize query Desktop Devices */
-@media (min-width: 992px) {
-
-    .hidded-parallax{
-        display: block;
-    }
-
-    nav .brand-logo {
-        left: 0%;
-    }
-}
-
-/** Materialize query Large Desktop Devices */
-@media (min-width: 1200px) {
-
-
-}
-
+/*.hidded-parallax{*/
+/*    display: none;*/
+/*}*/
 
 
