@@ -280,11 +280,8 @@ ul:not(.browser-default) {
     .hidded-parallax{
         display: none;
     }
-
-    html {
-        font-size: 21px;
-    }
 }
+
 
 /** Materialize query Tablet Devices */
 @media (min-width: 600px) {
@@ -298,7 +295,7 @@ ul:not(.browser-default) {
     }
 
     .side-nav li>a {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     a.button-collapse i {
@@ -306,7 +303,7 @@ ul:not(.browser-default) {
     }
 
     html {
-        font-size: 22px;
+        font-size: 2rem;
     }
 
     .hidded-parallax{
