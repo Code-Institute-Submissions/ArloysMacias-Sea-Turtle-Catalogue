@@ -34,7 +34,7 @@ The application allows users to monitor and sustainably manage marine turtle pop
 
 #### Colors
 
-* ![#5A9DB4](https://placehold.it/15/#ffffff/000000?text=+) #FFFFFF - Primary background color
+* ![#5A9DB4](https://placehold.it/15/FFFFFF/000000?text=+) #FFFFFF - Primary background color
 
 * ![#5A9DB4](https://placehold.it/15/5A9DB4/000000?text=+) #5A9DB4 - Button hover color, Form input field label color, Datepicker hover color
 
@@ -169,11 +169,13 @@ mapsSpec.js:
 
 #### Browser Compatibility test
 
-| Nr | Browser       | Name | Test result |
-| ---|:-------------:| :---------------: | :-----:|
-| 1 | [](static/images/navegators icons/588525cd6f293bbfae451a37.png) | Chrome | Passed |
-| 2 | [](static/images/navegators icons/compass-151722_1280.png)    | Safari| Passed |
-| 3 | [](static/images/navegators icons/firefox-303322_1280.png)    | Firefox| Passed |
+
+
+| Browser       | Name | Pass/Fail |
+|:-------------:| :---------------: | :-----:|
+| <img src="static/images/navegators icons/588525cd6f293bbfae451a37.png" width="45px" height="45px%" /> | Chrome | Pass |
+| <img src="static/images/navegators icons/compass-151722_1280.png" width="45px" height="45px%" /> | Safari| Pass |
+| <img src="static/images/navegators icons/firefox-303322_1280.png" width="45px" height="45px%" /> | Firefox| Pass |
 
 
 ### Unit tests
