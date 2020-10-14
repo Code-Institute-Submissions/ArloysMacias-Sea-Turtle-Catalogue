@@ -124,23 +124,29 @@ This site was tested with the inspection function of Chrome and Firefox and the 
 
 I used [W3C Validator](https://validator.w3.org/) to check the markup validity of Web documents in HTML and CSS. Highlighted errors:
 
-### CSS Validation
-Before:
-![cssTest](assets/images/tests/ValidatorW3/cssTest/before.png)
+### PHP Validation
+Before
+![phpTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 0.11.01.png)
 
-After:
-![cssTest](assets/images/tests/ValidatorW3/cssTest/after.png)
+After
+![phpTest](static/images/codeValidation/after/Captura de pantalla 2020-10-15 a las 0.48.12.png)
+
+### CSS Validation
+I used [W3C Validator](https://jigsaw.w3.org/css-validator/validator) to check myscript.js, the code was syntactically valid:
+![cssTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 1.20.09.png)
 
 ### HTML Validation
 Before:
-![htmlTest](assets/images/tests/ValidatorW3/htmlTest/before.png)
+![htmlTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 0.58.10.png)
 
 After:
-![htmlTest](assets/images/tests/ValidatorW3/htmlTest/after.png)
+![htmlTest](static/images/codeValidation/after/Captura de pantalla 2020-10-15 a las 1.07.40.png)
 
 ### JavaScrip
 
-I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check map.js and mapsSpec.js, the code was syntactically valid.
+I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check myscript.js, the code was syntactically valid:
+![javaScriptTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 1.23.28.png)
+
 
 map.js
 ![Map](assets/images/tests/ValidatorW3/jsTest/map.png)
@@ -188,18 +194,6 @@ For the moment, the project is created for a closed group of researchers working
 
 The project was created with IntelliJ and the site is hosted by GitHub. Different branches were used, each one with various commits, named depending on their long-term purpose and changed characteristic respectively. Several pull requests were created once the branch's purpose was fulfilled. It was used the master branch which allows every change, commit and push to show immediately in real time to users.
 
-### Allowing GitHub to publish from your site
-
-* Find the [repository](https://github.com/ArloysMacias/Near) on GitHub.
-
-* Under the repository name click `Settings` 
-
-* Under ***GitHub Pages*** section find and select `master branch` in the drop-down menu
-
-* Click `Save
-
-* A green information should appear that says "Your site is published at [https://user-name.github.io/Project-Name/](https://arloysmacias.github.io/Near/)"
-
 ### Cloning your repository to create local copy
 
 * Select the [Repository](https://github.com/ArloysMacias/Near)
@@ -215,6 +209,29 @@ The project was created with IntelliJ and the site is hosted by GitHub. Differen
 * Type `git clone` and paste the URL, press Enter
 
 * Your local clone has be created
+
+### DEPLOY TO HEROKU
+
+* On Heroku create an account and log in.
+* Click `new` and `create new app`.
+* Choose a unique name for your app, select region and click on `Create App`
+* Under the `Settings` click `Reveal Config Vars` and set IP to 0.0.0.0 and the PORT to 5000
+* Go to the CLI and type `$ sudo snap install --classic heroku`
+* Type `$ heroku login` command into the terminal
+* Create `requirements.txt` ($ sudo pip3 freeze --local > requirements.txt)
+* Create a `Procfile` (`$ echo web: python app.py > Procfile`)
+* Go back to Heroku, under `Deploy` find `Existing Git repository` and copy the command:`$ heroku git:remote -a <app_name>` Paste this into the terminal.
+* (If repository was not created already, type:
+* `$ cd my-project/`
+* `$ git init`
+* `$ heroku git:remote -a <app_name>`)
+* Type `$ heroku ps:scale web=1` into the terminal.
+* Go back to Heroku, and at `Settings` copy `https://<app_name>.herokuapp.com/` 
+* In the terminal type `git remote add http://<app_name>.herokuapp.com/`
+* Type `git push -u heroku master`
+* In the app dashboard, under `Settings` click on `Reveal Config Vars`
+* Set "MONGO_URI" and "MONGO_DBNAME" and "SECRET_KEY"
+* Once the build is complete, go back to Heroku and click on `Open App`
 
 ## Credits
 
