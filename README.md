@@ -179,16 +179,11 @@ mapsSpec.js:
 
 
 ### Unit tests
-For unit tests the [Jasmine](https://jasmine.github.io/2.5/introduction) unit testing framework was used
+*******
 
-* For the 1st test I Mock out Google Maps Places API following with Jasmine Spies created by [Kevin Wilson](https://kwilson.io/blog/mock-out-google-maps-geocoder-with-jasmine-spies/)
-    [![Create Marker test](assets/images/tests/CreateMarker.png)](testsJasmineWithMap.html)
-
-
-* For the second test try to verify that the map was created correctly and this mainly depends on whether or not the browser used supports geolocation, so just showing an alert that the browser supports geolocation would be sufficient.
-  To do this I instantiated the constructor and called the function initMapa and `spyOn(window, 'alert');`
-    [![Create Marker test](assets/images/tests/GetPosition.png)](testsJasmineWithMap.html)
-    
+### Defensive design
+For the moment, the project is created for a closed group of researchers working in the Galapagos. And for that reason, no admin credentials are needed to access and handle (create, edit, delete) the database.
+   
 ## Deployment
 
 The project was created with IntelliJ and the site is hosted by GitHub. Different branches were used, each one with various commits, named depending on their long-term purpose and changed characteristic respectively. Several pull requests were created once the branch's purpose was fulfilled. It was used the master branch which allows every change, commit and push to show immediately in real time to users.

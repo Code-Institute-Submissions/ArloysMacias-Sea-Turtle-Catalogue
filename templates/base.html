@@ -29,9 +29,9 @@
 </head>
 <body>
 <!--NavBar-->
-<nav class="custom-navbar" role="navigation">
+<nav class="custom-navbar">
     <div class="nav-wrapper">
-        <a href="{{url_for('index')}}" class="brand-logo"><img src="{{url_for('static', filename='images/logo/wave-306989_1280.png')}}" class="logo"></a>
+        <a href="{{url_for('index')}}" class="brand-logo"><img src="{{url_for('static', filename='images/logo/wave-306989_1280.png')}}" class="logo" alt="logo"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="{{url_for('index')}}">Home</a></li>
@@ -86,6 +86,6 @@
 <!-- Materializecss -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <!-- Myscript -->
-<script type="text/javascript" src="{{url_for('static', filename= 'js/myscript.js')}}"></script>
+<script src="{{url_for('static', filename= 'js/myscript.js')}}"></script>
 </body>
 </html>
