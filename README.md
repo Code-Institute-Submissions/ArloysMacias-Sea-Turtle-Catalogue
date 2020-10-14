@@ -174,7 +174,7 @@ mapsSpec.js:
 | Browser       | Name | Pass/Fail |
 |:-------------:| :---------------: | :-----:|
 | <img src="static/images/navegators icons/588525cd6f293bbfae451a37.png" width="45px" height="45px%" /> | Chrome | Pass |
-| <img src="static/images/navegators icons/compass-151722_1280.png" width="45px" height="45px%" /> | Safari| Pass |
+| <img src="static/images/navegators icons/compass-151722_1280.png" width="45px" height="53px%" /> | Safari| Pass |
 | <img src="static/images/navegators icons/firefox-303322_1280.png" width="45px" height="45px%" /> | Firefox| Pass |
 
 
