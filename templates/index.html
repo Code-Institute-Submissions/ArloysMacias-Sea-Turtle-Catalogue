@@ -43,7 +43,7 @@
                     <h2 class="center brown-text"><i class="material-icons">create</i></h2>
                     <h5 class="center">Manage</h5>
 
-                    <p class="light">GaRMDS provides invaluable information for Pacific island countries and territories
+                    <p class="light">GaRMDS provides invaluable information for Pacific countries and territories
                         to manage their turtle resources.</p>
                 </div>
             </div>
@@ -77,8 +77,9 @@
             src="{{url_for('static', filename='images/turtles-cards/wallpapertip_baby-sea-turtle-wallpaper_392835.jpg')}}"
             alt="Unsplashed background img 2"></div>
 </div>
+
 <!--Carousel-->
-<div class="carousel">
+ <div class="carousel">
     {% for turtle in turtles %}
     <a class="carousel-item" href="{{url_for('edit_turtle', turtle_id = turtle._id )}}">
         <div class="row">
