@@ -166,6 +166,16 @@ mapsSpec.js:
 | User edits an existing capture | Data to edit is displayed | All the fields are filled with existing data to edit | Pass | 
 | User deletes a capture | Capture data is deleted | Capture data is deleted | Pass | No alert is showing yet. The cascade delete function is not applicable for this business logic
 
+
+#### Browser Compatibility test
+
+| Nr | Browser       | Name | Test result |
+| ---|:-------------:| :---------------: | :-----:|
+| 1 | [](static/images/navegators icons/588525cd6f293bbfae451a37.png) | Chrome | Passed |
+| 2 | [](static/images/navegators icons/compass-151722_1280.png)    | Safari| Passed |
+| 3 | [](static/images/navegators icons/firefox-303322_1280.png)    | Firefox| Passed |
+
+
 ### Unit tests
 For unit tests the [Jasmine](https://jasmine.github.io/2.5/introduction) unit testing framework was used
 
