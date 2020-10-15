@@ -1,4 +1,5 @@
 # Galapagos Research and Monitoring Database System (GaRMDS)
+
 ## Table of Contents
 
 1. [Summary](##Summary)
