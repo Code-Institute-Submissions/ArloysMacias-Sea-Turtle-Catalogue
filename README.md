@@ -1,4 +1,62 @@
 # Galapagos Research and Monitoring Database System (GaRMDS)
+## Table of Contents
+
+1. [Summary](##Summary)
+
+    - [Project purpose](###Project purpose:)
+    
+2. [Project purpose](#Project-purpose)
+
+3. [UX](##UX)
+
+    - [User stories](###User stories)
+
+4. [Design and Colors](###Design and Colors)
+
+    - [Colors](####Colors)
+    
+    - [Fonts](####Fonts)
+    
+    - [Wireframes](####Wireframes)
+        
+        - [Final wireframes](####Final wireframes:)
+    
+5. [Features](##Features)
+
+    - [Existing Features](###Existing Features)
+
+    - [Frameworks, Editors & Version Control](###Frameworks Editors and Version Control)
+    
+    - [Tools Used](###Tools Used)
+
+6. [Testing](##Testing)
+
+    - [Unit tests](###Unit tests)
+
+        - [PHP Validation](####PHP Validation)
+    
+        - [CSS Validation](####CSS Validation)
+    
+        - [HTML Validation](####HTML Validation)
+    
+        - [JavaScrip Validation](####JavaScrip Validation)
+    
+    - [Functional tests](###Functional tests)
+    
+    - [Browser Compatibility test](###Browser Compatibility test)
+    
+    
+7. [Defensive design](###Defensive design)
+
+8. [Deployment](##Deployment)
+
+    - [Cloning your repository to create local copy](###Cloning your repository to create local copy)
+    
+    - [Deploy to heroku](###Deploy to heroku)
+    
+
+9. [Credits](##Credits)
+
 This is my 3rd milestone project with Code Institute and their Full Stack Web Developer course.
 
 ## Demo
@@ -23,7 +81,6 @@ The application allows users to monitor and sustainably manage marine turtle pop
 
 * As a user I want to be able to contact the administrator of the site.
 
-### User Stories:
 * As a user I want to be able to add my own turtle data to the database.
 
 * As a user I want be able to edit existing data on turtle individuals.
@@ -53,6 +110,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 [Desktop and tablet view](https://github.com/ArloysMacias/Sea-Turtle-Catalogue/blob/main/static/images/wireframes/Desktop%20Wireframe.png)
 
+[Back to Top](##Table of Contents)
 
 ## Features
 
@@ -72,6 +130,8 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 This database may get extensive in the future, so it would be convenient to implement some filters that allow for basic and fast queries with the purpose of finding an individual quickly without the need to search the entire database.
 
+[Back to Top](##Table of Contents)
+
 ## Technologies
 
 ### Languages
@@ -82,7 +142,7 @@ This database may get extensive in the future, so it would be convenient to impl
 * JavaScript
     * Used to make web development easier and more attractive.
  
-### Frameworks, Editors & Version Control
+### Frameworks Editors and Version Control
 * [Boostrap](https://getbootstrap.com/)
     * A front-end helper with a free collection of tools that is used to design and customize a responsive layout to the project.
 * [Materialize](https://materializecss.com/)
@@ -118,41 +178,38 @@ This database may get extensive in the future, so it would be convenient to impl
 * [PEP 8 Online Validator](http://pep8online.com/)
     * Used to check the Python code.
     
+[Back to Top](##Table of Contents)
+
 ## Testing
 
 This site was tested with the inspection function of Chrome and Firefox and the featured mobile view that they provide (iphone 6, 7, 8 plus and ipad). No issues were detected during the testing. Neither were any issues found when tests were performed in devices with high contrast.
 
 I used [W3C Validator](https://validator.w3.org/) to check the markup validity of Web documents in HTML and CSS. Highlighted errors:
 
-### PHP Validation
+### Unit tests
+
+#### PHP Validation
 Before
 ![phpTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 0.11.01.png)
 
 After
 ![phpTest](static/images/codeValidation/after/Captura de pantalla 2020-10-15 a las 0.48.12.png)
 
-### CSS Validation
+#### CSS Validation
 I used [W3C Validator](https://jigsaw.w3.org/css-validator/validator) to check myscript.js, the code was syntactically valid:
 ![cssTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 1.20.09.png)
 
-### HTML Validation
+#### HTML Validation
 Before:
 ![htmlTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 0.58.10.png)
 
 After:
 ![htmlTest](static/images/codeValidation/after/Captura de pantalla 2020-10-15 a las 1.07.40.png)
 
-### JavaScrip
+#### JavaScrip Validation
 
 I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check myscript.js, the code was syntactically valid:
 ![javaScriptTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 1.23.28.png)
-
-
-map.js
-![Map](assets/images/tests/ValidatorW3/jsTest/map.png)
-
-mapsSpec.js:
-![mapsSpec](assets/images/tests/ValidatorW3/jsTest/mapsSpec.png)
 
 ### Functional tests
 
@@ -172,10 +229,7 @@ mapsSpec.js:
 | User edits an existing capture | Data to edit is displayed | All the fields are filled with existing data to edit | Pass | 
 | User deletes a capture | Capture data is deleted | Capture data is deleted | Pass | No alert is showing yet. The cascade delete function is not applicable for this business logic
 
-
-#### Browser Compatibility test
-
-
+### Browser Compatibility test
 
 | Browser       | Name | Pass/Fail |
 |:-------------:| :---------------: | :-----:|
@@ -183,13 +237,11 @@ mapsSpec.js:
 | <img src="static/images/navegators icons/compass-151722_1280.png" width="45px" height="53px%" /> | Safari| Pass |
 | <img src="static/images/navegators icons/firefox-303322_1280.png" width="45px" height="45px%" /> | Firefox| Pass |
 
-
-### Unit tests
-*******
-
 ### Defensive design
 For the moment, the project is created for a closed group of researchers working in the Galapagos. And for that reason, no admin credentials are needed to access and handle (create, edit, delete) the database.
    
+[Back to Top](##Table of Contents)
+
 ## Deployment
 
 The project was created with IntelliJ and the site is hosted by GitHub. Different branches were used, each one with various commits, named depending on their long-term purpose and changed characteristic respectively. Several pull requests were created once the branch's purpose was fulfilled. It was used the master branch which allows every change, commit and push to show immediately in real time to users.
@@ -210,7 +262,7 @@ The project was created with IntelliJ and the site is hosted by GitHub. Differen
 
 * Your local clone has be created
 
-### DEPLOY TO HEROKU
+### Deploy to heroku
 
 * On Heroku create an account and log in.
 * Click `new` and `create new app`.
@@ -236,3 +288,5 @@ The project was created with IntelliJ and the site is hosted by GitHub. Differen
 ## Credits
 
 Thanks to my mentor who supported me and came with good ideas and thanks to my wife who put up with me during this time.
+
+[Back to Top](##Table of Contents)
