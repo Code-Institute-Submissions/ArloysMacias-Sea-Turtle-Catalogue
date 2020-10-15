@@ -134,7 +134,7 @@ def update_capture(capture_id):
     return redirect(url_for('get_captures'))
 
 
-@app.route('/delete_capture/<capture_id>')
+@app.route('/delete_capture/<capture_id>', methods=["POST"])
 def delete_capture(capture_id):
     mongo.db.capture_data.remove({'_id': ObjectId(capture_id)})
     return redirect(url_for('get_captures'))

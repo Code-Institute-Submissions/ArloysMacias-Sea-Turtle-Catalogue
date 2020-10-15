@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 });
 
-
+//Uploading modal
 function openModal() {
 
     //call the specific div (modal)
@@ -61,6 +61,12 @@ function openModal() {
 
     showPleaseWait();
 };
+
+//Delete modal
+$('#delete').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+})
+
 
 
 // Thermometer  https://codepen.io/GeorgePark/pen/oVgGyM
