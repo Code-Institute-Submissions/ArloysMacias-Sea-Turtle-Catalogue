@@ -1,62 +1,37 @@
 # Galapagos Research and Monitoring Database System (GaRMDS)
+This is my 3rd milestone project with Code Institute and their Full Stack Web Developer course.
 
 ## Table of Contents
-
-1. [Summary](##Summary)
-
-    - [Project purpose](###Project-purpose)
-
-2. [UX](##UX)
-
-    - [User stories](###User-stories)
-
-3. [Design and Colors](##Design-and-Colors)
-
-    - [Colors](####Colors)
-    
-    - [Fonts](###Fonts)
-    
-    - [Wireframes](####Wireframes)
-        
-        - [Final wireframes](####Final-wireframes)
-    
-4. [Features](##Features)
-
-    - [Existing Features](###Existing-Features)
-
-    - [Frameworks, Editors & Version Control](###Frameworks-Editors-and-Version-Control)
-    
-    - [Tools Used](###Tools-Used)
-
-5. [Testing](##Testing)
-
-    - [Unit tests](###Unit-tests)
-
-        - [PHP Validation](####PHP-Validation)
-    
-        - [CSS Validation](####CSS-Validation)
-    
-        - [HTML Validation](####HTML-Validation)
-    
-        - [JavaScrip Validation](####JavaScrip-Validation)
-    
-    - [Functional tests](###Functional-tests)
-    
-    - [Browser Compatibility test](###Browser-Compatibility-test)
-    
-    
-6. [Defensive design](###Defensive-design)
-
-7. [Deployment](##Deployment)
-
-    - [Cloning your repository to create local copy](###Cloning-your-repository-to-create-local-copy)
-    
-    - [Deploy to heroku](###Deploy-to-heroku)
-    
-
-8. [Credits](##Credits)
-
-This is my 3rd milestone project with Code Institute and their Full Stack Web Developer course.
+- [Demo](#demo)
+- [Summary](#summary)
+  * [Project purpose:](#project-purpose-)
+- [UX](#ux)
+  * [User Stories:](#user-stories-)
+  * [Design and Colors](#design-and-colors)
+    + [Colors](#colors)
+    + [Fonts](#fonts)
+    + [Wireframes](#wireframes)
+      - [Final wireframes:](#final-wireframes-)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+  * [Features Left to Implement](#features-left-to-implement)
+- [Technologies](#technologies)
+  * [Languages](#languages)
+  * [Frameworks Editors and Version Control](#frameworks-editors-and-version-control)
+  * [Tools Used](#tools-used)
+- [Testing](#testing)
+  * [Unit tests](#unit-tests)
+    + [PHP Validation](#php-validation)
+    + [CSS Validation](#css-validation)
+    + [HTML Validation](#html-validation)
+    + [JavaScrip Validation](#javascrip-validation)
+  * [Functional tests](#functional-tests)
+  * [Browser Compatibility test](#browser-compatibility-test)
+  * [Defensive design](#defensive-design)
+- [Deployment](#deployment)
+  * [Cloning your repository to create local copy](#cloning-your-repository-to-create-local-copy)
+  * [Deploy to heroku](#deploy-to-heroku)
+- [Credits](#credits)
 
 ## Demo
 ![Demo](/static/images/demoGif/demo.gif)
@@ -86,7 +61,7 @@ The application allows users to monitor and sustainably manage marine turtle pop
 
 * As a user I want to be able to delete existing data on turtle individuals.
 
-## Design and Colors
+### Design and Colors
 
 #### Colors
 
@@ -94,7 +69,7 @@ The application allows users to monitor and sustainably manage marine turtle pop
 
 * ![#5A9DB4](https://placehold.it/15/5A9DB4/000000?text=+) #5A9DB4 - Button hover color, Form input field label color, Datepicker hover color
 
-### Fonts
+#### Fonts
 
 For all fonts I used Roboto, from Google Fonts. This font works well with the design as it is modern and simple. > Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. - [[Google Fonts, 2020]](https://fonts.google.com/specimen/Roboto).
 
@@ -109,7 +84,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 [Desktop and tablet view](https://github.com/ArloysMacias/Sea-Turtle-Catalogue/blob/main/static/images/wireframes/Desktop%20Wireframe.png)
 
-[Back to Top](##table-of-Contents)
+[Back to Top](##Table of Contents)
 
 ## Features
 
@@ -129,7 +104,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 This database may get extensive in the future, so it would be convenient to implement some filters that allow for basic and fast queries with the purpose of finding an individual quickly without the need to search the entire database.
 
-[Back to Top](##table-of-Contents)
+[Back to Top](##Table of Contents)
 
 ## Technologies
 
@@ -177,7 +152,7 @@ This database may get extensive in the future, so it would be convenient to impl
 * [PEP 8 Online Validator](http://pep8online.com/)
     * Used to check the Python code.
     
-[Back to Top](##table-of-Contents)
+[Back to Top](##Table of Contents)
 
 ## Testing
 
