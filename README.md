@@ -164,26 +164,26 @@ I used [W3C Validator](https://validator.w3.org/) to check the markup validity o
 
 #### PHP Validation
 Before
-![phpTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 0.11.01.png)
+![phpTest](static/images/codeValidation/before/beforepython.png)
 
 After
-![phpTest](static/images/codeValidation/after/Captura de pantalla 2020-10-15 a las 0.48.12.png)
+![phpTest](static/images/codeValidation/after/afterpython.png)
 
 #### CSS Validation
 I used [W3C Validator](https://jigsaw.w3.org/css-validator/validator) to check myscript.js, the code was syntactically valid:
-![cssTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 1.20.09.png)
+![cssTest](static/images/codeValidation/before/beforecss.png)
 
 #### HTML Validation
 Before:
-![htmlTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 0.58.10.png)
+![htmlTest](static/images/codeValidation/before/beforehtml.png)
 
 After:
-![htmlTest](static/images/codeValidation/after/Captura de pantalla 2020-10-15 a las 1.07.40.png)
+![htmlTest](static/images/codeValidation/after/afterhtml.png)
 
 #### JavaScrip Validation
 
 I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check myscript.js, the code was syntactically valid:
-![javaScriptTest](static/images/codeValidation/before/Captura de pantalla 2020-10-15 a las 1.23.28.png)
+![javaScriptTest](static/images/codeValidation/before/beforejavascript.png)
 
 ### Functional tests
 
