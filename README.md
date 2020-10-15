@@ -109,7 +109,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 [Desktop and tablet view](https://github.com/ArloysMacias/Sea-Turtle-Catalogue/blob/main/static/images/wireframes/Desktop%20Wireframe.png)
 
-[Back to Top](##Table of Contents)
+[Back to Top](##table-of-Contents)
 
 ## Features
 
@@ -129,7 +129,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 This database may get extensive in the future, so it would be convenient to implement some filters that allow for basic and fast queries with the purpose of finding an individual quickly without the need to search the entire database.
 
-[Back to Top](##Table of Contents)
+[Back to Top](##table-of-Contents)
 
 ## Technologies
 
@@ -177,7 +177,7 @@ This database may get extensive in the future, so it would be convenient to impl
 * [PEP 8 Online Validator](http://pep8online.com/)
     * Used to check the Python code.
     
-[Back to Top](##Table of Contents)
+[Back to Top](##table-of-Contents)
 
 ## Testing
 
@@ -239,7 +239,7 @@ I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to che
 ### Defensive design
 For the moment, the project is created for a closed group of researchers working in the Galapagos. And for that reason, no admin credentials are needed to access and handle (create, edit, delete) the database.
    
-[Back to Top](##Table of Contents)
+[Back to Top](##table-of-Contents)
 
 ## Deployment
 
@@ -288,4 +288,4 @@ The project was created with IntelliJ and the site is hosted by GitHub. Differen
 
 Thanks to my mentor who supported me and came with good ideas and thanks to my wife who put up with me during this time.
 
-[Back to Top](##Table of Contents)
+[Back to Top](##table-of-Contents)
