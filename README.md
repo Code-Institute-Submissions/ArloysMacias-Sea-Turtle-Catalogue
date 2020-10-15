@@ -222,7 +222,7 @@ The project was created with IntelliJ and the site is hosted by GitHub. Differen
 
 ### Cloning your repository to create local copy
 
-* Select the [Repository](https://github.com/ArloysMacias/Near)
+* Select the [Repository](https://github.com/ArloysMacias/Sea-Turtle-Catalogue)
 
 * Click on the 'Clone or Download' button
 
