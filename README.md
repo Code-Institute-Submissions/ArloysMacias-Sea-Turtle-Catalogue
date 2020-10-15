@@ -10,11 +10,11 @@
 
     - [User stories](###User-stories)
 
-3. [Design and Colors](###Design-and-Colors)
+3. [Design and Colors](##Design-and-Colors)
 
     - [Colors](####Colors)
     
-    - [Fonts](####Fonts)
+    - [Fonts](###Fonts)
     
     - [Wireframes](####Wireframes)
         
@@ -86,7 +86,7 @@ The application allows users to monitor and sustainably manage marine turtle pop
 
 * As a user I want to be able to delete existing data on turtle individuals.
 
-### Design and Colors
+## Design and Colors
 
 #### Colors
 
@@ -94,7 +94,7 @@ The application allows users to monitor and sustainably manage marine turtle pop
 
 * ![#5A9DB4](https://placehold.it/15/5A9DB4/000000?text=+) #5A9DB4 - Button hover color, Form input field label color, Datepicker hover color
 
-#### Fonts
+### Fonts
 
 For all fonts I used Roboto, from Google Fonts. This font works well with the design as it is modern and simple. > Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. - [[Google Fonts, 2020]](https://fonts.google.com/specimen/Roboto).
 
