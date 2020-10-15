@@ -3,7 +3,7 @@
 
 1. [Summary](##Summary)
 
-    - [Project purpose](###Project-purpose:)
+    - [Project purpose](###Project-purpose)
 
 2. [UX](##UX)
 
