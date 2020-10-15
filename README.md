@@ -34,7 +34,7 @@ This is my 3rd milestone project with Code Institute and their Full Stack Web De
 - [Credits](#credits)
 
 ## Demo
-![Demo](static/images/demoGif/ezgif.com-gif-maker.gif)
+![Demo](static/images/demoGif/good.gif)
 
 ## Summary 
 
@@ -198,10 +198,10 @@ I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to che
 |    | User clicks on "Manage Capture" | User is directed to the capture editor | Pass | This works on every page of the project 
 | User adds a new turtle | Turtle data is inserted into database | The page indicates that the data is uploading | Pass | Loading time depends on image size
 | User edits an existing turtle | Data to edit is displayed | All the fields are filled with existing data to edit | Pass | The recapture switch is not implemented yet
-| User deletes a turtle | Turtle data is deleted | Turtle data is deleted | Pass | No alert is showing yet
+| User deletes a turtle | Turtle data is deleted | Turtle data is deleted | Pass |
 | User adds a new capture| Capture data is inserted into database | The page indicates that the data is uploading | Pass | 
 | User edits an existing capture | Data to edit is displayed | All the fields are filled with existing data to edit | Pass | 
-| User deletes a capture | Capture data is deleted | Capture data is deleted | Pass | No alert is showing yet. The cascade delete function is not applicable for this business logic
+| User deletes a capture | Capture data is deleted | Capture data is deleted | Pass | The cascade delete function is not applicable for this business logic
 
 ### Browser Compatibility test
 
