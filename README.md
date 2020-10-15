@@ -84,7 +84,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 [Desktop and tablet view](https://github.com/ArloysMacias/Sea-Turtle-Catalogue/blob/main/static/images/wireframes/Desktop%20Wireframe.png)
 
-[Back to Top](##Table of Contents)
+[Back to Top](#table-of-contents))
 
 ## Features
 
@@ -104,7 +104,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 This database may get extensive in the future, so it would be convenient to implement some filters that allow for basic and fast queries with the purpose of finding an individual quickly without the need to search the entire database.
 
-[Back to Top](##Table of Contents)
+[Back to Top](#table-of-contents))
 
 ## Technologies
 
@@ -152,7 +152,7 @@ This database may get extensive in the future, so it would be convenient to impl
 * [PEP 8 Online Validator](http://pep8online.com/)
     * Used to check the Python code.
     
-[Back to Top](##Table of Contents)
+[Back to Top](#table-of-contents))
 
 ## Testing
 
