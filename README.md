@@ -17,7 +17,7 @@
     
     - [Wireframes](####Wireframes)
         
-        - [Final wireframes](####Final-wireframes:)
+        - [Final wireframes](####Final-wireframes)
     
 4. [Features](##Features)
 
