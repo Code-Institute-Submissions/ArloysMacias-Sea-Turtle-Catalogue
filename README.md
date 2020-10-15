@@ -4,14 +4,14 @@ This is my 3rd milestone project with Code Institute and their Full Stack Web De
 ## Table of Contents
 - [Demo](#demo)
 - [Summary](#summary)
-  * [Project purpose:](#project-purpose-)
+  * [Project purpose:](#project-purpose)
 - [UX](#ux)
-  * [User Stories:](#user-stories-)
+  * [User Stories:](#user-stories)
   * [Design and Colors](#design-and-colors)
     + [Colors](#colors)
     + [Fonts](#fonts)
     + [Wireframes](#wireframes)
-      - [Final wireframes:](#final-wireframes-)
+      - [Final wireframes:](#final-wireframes)
 - [Features](#features)
   * [Existing Features](#existing-features)
   * [Features Left to Implement](#features-left-to-implement)
@@ -36,11 +36,11 @@ This is my 3rd milestone project with Code Institute and their Full Stack Web De
 ## Demo
 ![Demo](static/images/demoGif/good.gif)
 
-## Summary 
+## Summary
 
 My wife is a marine biologist who has worked with sea turtles in Galapagos. In their conservation work they collect data from hundreds of individuals with the purpose to monitor the sea turtle population. The field work is challenging, where the standard method is to note on paper and later, in the lab, enter the data into a spreadsheet which leads to data being lost or mixed up during entry. Because of this a simple input method is needed where data can be entered instantly and on site.
 
-### Project purpose: 
+### Project purpose:
 
 The purpose of this project is to build a full-stack site that allows turtle conservationists to manage a common dataset about sea turtle populations in the Pacific.
 
@@ -84,7 +84,7 @@ I wanted to have a table with pagination using Material Design for Bootstrap but
 
 [Desktop and tablet view](https://github.com/ArloysMacias/Sea-Turtle-Catalogue/blob/main/static/images/wireframes/Desktop%20Wireframe.png)
 
-[Back to Top](#table-of-contents))
+[Back to Top](#table-of-contents)
 
 ## Features
 
