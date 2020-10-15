@@ -3,15 +3,13 @@
 
 1. [Summary](##Summary)
 
-    - [Project purpose](###Project purpose:)
-    
-2. [Project purpose](#Project-purpose)
+    - [Project purpose](###Project-purpose:)
 
-3. [UX](##UX)
+2. [UX](##UX)
 
-    - [User stories](###User stories)
+    - [User stories](###User-stories)
 
-4. [Design and Colors](###Design and Colors)
+3. [Design and Colors](###Design-and-Colors)
 
     - [Colors](####Colors)
     
@@ -19,43 +17,43 @@
     
     - [Wireframes](####Wireframes)
         
-        - [Final wireframes](####Final wireframes:)
+        - [Final wireframes](####Final-wireframes:)
     
-5. [Features](##Features)
+4. [Features](##Features)
 
-    - [Existing Features](###Existing Features)
+    - [Existing Features](###Existing-Features)
 
-    - [Frameworks, Editors & Version Control](###Frameworks Editors and Version Control)
+    - [Frameworks, Editors & Version Control](###Frameworks-Editors-and-Version-Control)
     
-    - [Tools Used](###Tools Used)
+    - [Tools Used](###Tools-Used)
 
-6. [Testing](##Testing)
+5. [Testing](##Testing)
 
-    - [Unit tests](###Unit tests)
+    - [Unit tests](###Unit-tests)
 
-        - [PHP Validation](####PHP Validation)
+        - [PHP Validation](####PHP-Validation)
     
-        - [CSS Validation](####CSS Validation)
+        - [CSS Validation](####CSS-Validation)
     
-        - [HTML Validation](####HTML Validation)
+        - [HTML Validation](####HTML-Validation)
     
-        - [JavaScrip Validation](####JavaScrip Validation)
+        - [JavaScrip Validation](####JavaScrip-Validation)
     
-    - [Functional tests](###Functional tests)
+    - [Functional tests](###Functional-tests)
     
-    - [Browser Compatibility test](###Browser Compatibility test)
+    - [Browser Compatibility test](###Browser-Compatibility-test)
     
     
-7. [Defensive design](###Defensive design)
+6. [Defensive design](###Defensive-design)
 
-8. [Deployment](##Deployment)
+7. [Deployment](##Deployment)
 
-    - [Cloning your repository to create local copy](###Cloning your repository to create local copy)
+    - [Cloning your repository to create local copy](###Cloning-your-repository-to-create-local-copy)
     
-    - [Deploy to heroku](###Deploy to heroku)
+    - [Deploy to heroku](###Deploy-to-heroku)
     
 
-9. [Credits](##Credits)
+8. [Credits](##Credits)
 
 This is my 3rd milestone project with Code Institute and their Full Stack Web Developer course.
 
