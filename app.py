@@ -78,7 +78,7 @@ def update_turtle(turtle_id):
     return redirect(url_for('get_turtles'))
 
 
-@app.route('/delete_turtle/<turtle_id>')
+@app.route('/delete_turtle/<turtle_id>', methods=["POST"])
 def delete_turtle(turtle_id):
     mongo.db.turtles.remove({'_id': ObjectId(turtle_id)})
     return redirect(url_for('get_turtles'))
