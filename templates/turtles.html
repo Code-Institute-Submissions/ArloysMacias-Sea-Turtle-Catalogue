@@ -4,32 +4,13 @@
     <div class="row">
         <ul class="collapsible" data-collapsible="accordion">
             {% for turtle in turtles %}
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h4>Delete Confirmation</h4>
-                    <p>Are you sure you want to delete this?</p>
-
-                    <form action="{{url_for('delete_turtle', turtle_id = turtle._id )}}" method="post">
-                        <div class="modal-body">
-                            <input type="hidden" name="category_id" id="cat_id" value="">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" href="#!" class="btn modal-close waves-effect waves-green" data-dismiss="modal">No, Cancel</button>
-                            <button type="submit" class="btn btn-warning red">Yes, Delete</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-
-
             <li>
                 <div class="collapsible-header">
                     <div class="turtle_header col s9">
                         <strong>{{turtle.turtle_name}}</strong>--{{turtle.capture_location}}
                     </div>
-                    <a class="modal-trigger" href="#modal1"><i class="medium material-icons">delete</i></a>
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger" href="#{{turtle._id}}"><i class="medium material-icons">delete</i></a>
                     <a href="{{url_for('edit_turtle', turtle_id = turtle._id )}}" ><i class="medium material-icons">create</i></a>
                 </div>
                 <div class="collapsible-body">
@@ -58,6 +39,24 @@
                     </table>
                 </div>
             </li>
+            <!-- Modal Structure -->
+            <div id="{{turtle._id}}" class="modal">
+                <div class="modal-content">
+                    <h4>Delete Confirmation</h4>
+                    <p>Are you sure you want to delete this turtle?</p>
+
+                    <form action="{{url_for('delete_turtle', turtle_id = turtle._id )}}" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="category_id" id="cat_id" value="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" href="#!" class="btn modal-close waves-effect waves-green" data-dismiss="modal">No, Cancel</button>
+                            <button type="submit" class="btn btn-warning red">Yes, Delete</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
             {% endfor %}
         </ul>
         <a href="{{url_for('add_turtle')}}" class="waves-effect waves-light btn">New</a>

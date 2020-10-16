@@ -47,7 +47,6 @@ def insert_turtle():
                 'capture_location': request.form.get('capture_location')
             }
         )
-    # turtles.insert_one(request.form.to_dict()) //Doesnt work with this way
     return redirect(url_for('get_turtles'))
 
 
@@ -98,15 +97,6 @@ def new_capture(route):
 @app.route('/insert_capture/<source>', methods=['POST'])
 def insert_capture(source):
     mongo.db.capture_data.insert_one(request.form.to_dict())
-    # mongo.db.capture_data.insert(
-    #     {
-    #         'capture_location': request.form.get('capture_location'),
-    #         'weather': request.form.get('weather'),
-    #         'ocean_temperature': request.form.get('ocean_temperature'),
-    #         'date': request.form.get('date')
-    #         # 'monitoring_total_time': request.form.get('monitoring_total_time')
-    #     }
-    # )
     if source == 'from_addTurtle':
         return redirect(url_for('add_turtle'))
 
@@ -124,7 +114,6 @@ def edit_capture(capture_id):
 
 
 @app.route('/update_capture/<capture_id>', methods=["POST"])
-# need to be equal to {url_for('update_capture'
 def update_capture(capture_id):
     mongo.db.capture_data.update({'_id': ObjectId(capture_id)},
                                  {'capture_location': request.form.get('capture_location'),
