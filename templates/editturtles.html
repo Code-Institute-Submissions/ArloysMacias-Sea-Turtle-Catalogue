@@ -29,7 +29,17 @@
                     {% else %}
                     <img src="{{url_for('load_image' , file_name = turtle.picture)}}" class="picture-src" id="wizardPicturePreview">
                     {% endif %}
-                    <input type="file" id="wizard-picture" name="picture" class="">
+
+                    <!--I can't put a default value to input file due to security reasons.-->
+
+                    <!--https://stackoverflow.com/questions/1696877/how-to-set-a-value-to-a-file-input-in-html -->
+                    <!--
+                    <form name="foo" method="post" enctype="multipart/form-data">
+                        <input type="file" value="c:/passwords.txt">
+                    </form>
+                    <script>document.foo.submit();</script>
+                    -->
+                    <input type="file" id="wizard-picture" name="picture" value="{{turtle.picture}}" class="">
                 </div>
                 <small id="label_upload_1">Choose Picture</small>
             </div>

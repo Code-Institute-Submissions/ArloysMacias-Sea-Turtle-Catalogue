@@ -32,7 +32,9 @@
                             <td>{{turtle.right_flipper_tag}}</td>
                             <td>{{turtle.morphotype}}</td>
                             <td>{{turtle.gender}}</td>
-                            <td class="hidded-column"><img class="table-picture" src="{{url_for('load_image', file_name=turtle.picture)}}" alt=""></td>
+                            {% if turtle.picture %}
+                                <td class="hidded-column"><img class="table-picture" src="{{url_for('load_image', file_name=turtle.picture)}}" alt=""></td>
+                            {%endif%}
                             <td>{{turtle.capture_location}}</td>
                         </tr>
                         </tbody>
@@ -57,6 +59,7 @@
 
                 </div>
             </div>
+
             {% endfor %}
         </ul>
         <a href="{{url_for('add_turtle')}}" class="waves-effect waves-light btn">New</a>

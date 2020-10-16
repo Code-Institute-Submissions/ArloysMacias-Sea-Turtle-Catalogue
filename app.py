@@ -73,6 +73,7 @@ def update_turtle(turtle_id):
                         'morphotype': request.form.get('morphotype'),
                         'gender': request.form.get('gender'),
                         'picture': picture.filename,
+                        # 'picture': request.form.get('picture'),
                         'capture_location': request.form.get('capture_location')})
     return redirect(url_for('get_turtles'))
 
